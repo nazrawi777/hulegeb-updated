@@ -1,0 +1,689 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+	 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>About Us | Hulegeb - Empowering Ethiopia's Blind & Disabled Community</title>
+  
+<meta name="description" content="Discover the mission behind Hulegeb Training & Rehabilitation. We are dedicated to providing inclusive training and holistic rehabilitation services for all.">
+<link rel="canonical" href="https://www.hulegebberhan.org/about/">
+  <meta name="description" content="Learn about Hulegeb's 70 year mission to empower blind and physically disabled individuals in Ethiopia through vocational training, employment, and advocacy.">
+  <meta name="keywords" content="Hulegeb, Ethiopia, disability rights, blind, vocational training, NGO, charity, empowerment, inclusion">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | Hulegeb - Empowering Ethiopia's Blind & Disabled Community">
+  <meta property="og:description" content="Learn about Hulegeb's 70 year mission to empower blind and physically disabled individuals in Ethiopia.">
+  <meta property="og:type" content="website">
+  
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Hulegeb">
+  <meta name="twitter:description" content="Empowering Ethiopia's Blind & Disabled Community since 1952.">
+  
+ 
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+		<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+	<!-- Font Awesome Icon Css-->
+	<link href="{% static 'css/all.min.css' %}" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="{% static 'css/mousecursor.css' %}">
+	<!-- Main Custom Css -->
+	<link href="{% static 'css/custom.css' %}?=1.54" rel="stylesheet" media="screen">
+  <style>
+  .phone-icon {
+    width: 34px; /* Change to your icon's actual width */
+    height: 34px; /* Change to your icon's actual height */
+    background-color: #000; /* Your desired color */
+    
+    /* Ensure the mask fits */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+   .main-menu ul li a{
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.4em;
+	padding: 14px 20px !important;
+	color: #000 !important;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+	
+}
+  .main-menu ul li a i{
+
+	color: #f37a20 !important;
+
+	
+}
+
+    #abthead {
+    background-color: #f37a20;
+    color: #fff !important;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 5.6px 6.5px !important;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+	<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="{% url 'index' %}">
+						<img src="https://i.postimg.cc/BvFLKf2m/Hulegeb-Training-Rehabilitation-Logo-1-Black-copy.png" alt="Logo">
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
+                                <li class="nav-item submenu"><a class="nav-link" href="#" id="abthead">About</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}" id="abthead">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ourhistory' %}">Our Legacy</a></li>
+                                       
+                                    </ul>
+                                </li>                              
+                                
+                                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                                <li>
+    <a href="{% url 'store' %}">Products</a>
+</li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Our Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'programmes' %}">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'video_gallery' %}">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}">Donation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> 
+                                <li>
+    <a href="{% url 'admin:index' %}">
+        <i class="fa-solid fa-user"></i>
+    </a>
+</li>                        
+                            </ul>
+                        </div>
+                        <!-- Contact Now Box Start -->
+                        <div class="contact-now-box">
+                           <div class="icon-box">
+    <div class="phone-icon" style="-webkit-mask-image: url('{% static 'images/icon-phone.svg' %}'); mask-image: url('{% static 'images/icon-phone.svg' %}');"></div>
+</div>
+                            
+                            <div class="contact-now-box-content">
+                                <p>need help !</p>
+                                <h3><a href="tel:+251-11-3-72-66-47">+251-11-3-72-66-47</a></h3>                                
+                            </div>
+                        </div>
+                        <!-- Contact Now Box End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+   <main class="page-main">
+    
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero1" aria-labelledby="hero-heading" >
+      <div class="hero1__background">
+        <img 
+          src="{% static 'assets/hero-weaving.jpg' %}" alt="Ethiopian artisan weaving traditional carpet, showcasing skilled craftsmanship" 
+          class="hero1__image"
+          loading="eager"
+        >
+       
+      </div>
+      
+      <div class="hero1__decorations">
+        <div class="hero1__blob hero__blob--primary"></div>
+        <div class="hero1__blob hero__blob--secondary"></div>
+      </div>
+      
+      <div class="container1 hero1__content" style="margin-top: 100px;">
+        <div class="hero1__text">
+          <span class="hero1__badge animate-hero-reveal">
+            Est. 1952 • Addis Ababa, Ethiopia
+          </span>
+          
+          
+          
+          <p class="hero1__subtitle animate-hero-reveal animation-delay-200" data-content="organization.name">
+            Hulegeb Training and Rehabilitation for Blind and Disabled Society Association
+          </p>
+          
+          <p class="hero1__tagline animate-hero-reveal animation-delay-300" data-content="organization.tagline">
+            Empowering Vision, Building Futures
+          </p>
+          
+          <p class="hero1__description animate-hero-reveal animation-delay-400" data-content="organization.description">
+            Transforming lives through dignity, skills, and opportunity for Ethiopia's blind and disabled community since 1952.
+          </p>
+          
+          <div class="hero1__scroll animate-hero-reveal animation-delay-500">
+            <span class="hero1__scroll-text">Discover Our Story</span>
+            <div class="hero1__scroll-indicator">
+              <div class="hero1__scroll-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========== STATS SECTION ========== -->
+    <section class="stats bg-gradient-teal" aria-labelledby="stats-heading">
+      <h2 id="stats-heading" class="sr-only">Our Impact in Numbers</h2>
+      <div class="container1">
+        <div class="stats__grid" id="stats-container1">
+          <!-- Stats are injected via JavaScript from JSON -->
+          <div class="stat-card reveal-on-scroll" data-stat-index="0">
+            <div class="stat-card__value counter-number" data-target="85" data-suffix="">0</div>
+            <h3 class="stat-card__label">Dedicated Employees</h3>
+            <p class="stat-card__description">Committed team members serving our mission</p>
+          </div>
+          <div class="stat-card reveal-on-scroll" data-stat-index="1">
+            <div class="stat-card__value counter-number" data-target="70" data-suffix="">0</div>
+            <h3 class="stat-card__label">Years of Service</h3>
+            <p class="stat-card__description">Decades of empowering lives</p>
+          </div>
+          <div class="stat-card reveal-on-scroll" data-stat-index="2">
+            <div class="stat-card__value counter-number" data-target="28287" data-suffix="">0</div>
+            <h3 class="stat-card__label">Sq Meters of Land</h3>
+            <p class="stat-card__description">Our foundational endowment</p>
+          </div>
+          <div class="stat-card reveal-on-scroll" data-stat-index="3">
+            <div class="stat-card__value counter-number" data-target="50" data-suffix="%">0</div>
+            <h3 class="stat-card__label">Gender Balance</h3>
+            <p class="stat-card__description">Nearly equal representation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========== MISSION & VISION SECTION ========== -->
+    <section class="mission-vision" aria-labelledby="mission-vision-heading">
+      <h2 id="mission-vision-heading" class="sr-only">Our Mission and Vision</h2>
+      <div class="container1">
+        <div class="mission-vision__grid">
+          <!-- Mission -->
+          <div class="mission-vision__item reveal-slide-left">
+            <div class="mission-vision__accent mission-vision__accent--primary"></div>
+            <div class="mission-vision__content">
+              <span class="badge1 badge1--primary">Our Purpose</span>
+              <h3 class="mission-vision__title" data-content="mission.title">Our Mission</h3>
+              <p class="mission-vision__text" data-content="mission.content">
+                The Hulegeb Training and Rehabilitation for Blind and Disabled Society Association is dedicated to promoting the socio-economic empowerment, dignity, and full inclusion of individuals with visual and physical disabilities in Ethiopia. We envision a society where persons with disabilities are not dependent, but are empowered, productive leaders. We break down barriers to create a culture of equal opportunity, unlocking their potential to shape a stronger community and nation.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Vision -->
+          <div class="mission-vision__item reveal-slide-right">
+            <div class="mission-vision__accent mission-vision__accent--secondary"></div>
+            <div class="mission-vision__content">
+              <span class="badge1 badge1--secondary">Our Aspiration</span>
+              <h3 class="mission-vision__title" data-content="vision.title">Our Vision</h3>
+              <p class="mission-vision__text" data-content="vision.content">
+                To be the leading catalyst for an inclusive Ethiopia where every blind and physically disabled individual attains self-reliance, actively participates in the socio-economic fabric, and is recognized for their inherent dignity and contribution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========== CORE VALUES SECTION ========== -->
+    <section class="values bg-gradient-gold" aria-labelledby="values-heading">
+      <div class="container1">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge1 badge1--primary">What Guides Us</span>
+          <h2 id="values-heading" class="section-title">Our Core Values</h2>
+          <div class="section-divider"></div>
+        </div>
+        
+        <div class="values__grid" id="values-container1">
+          <!-- Values are styled consistently -->
+          <div class="value-card card-elevated reveal-on-scroll" data-value-index="0">
+            <div class="value-card__icon icon-container1">
+              <i data-lucide="users"></i>
+            </div>
+            <h3 class="value-card__title">Inclusion</h3>
+            <p class="value-card__description">We believe in a society where disability is not a barrier to participation</p>
+          </div>
+          
+          <div class="value-card card-elevated reveal-on-scroll" data-value-index="1">
+            <div class="value-card__icon icon-container1">
+              <i data-lucide="heart"></i>
+            </div>
+            <h3 class="value-card__title">Dignity</h3>
+            <p class="value-card__description">We uphold the inherent worth of every individual, fostering respect and self-worth through productive work</p>
+          </div>
+          
+          <div class="value-card card-elevated reveal-on-scroll" data-value-index="2">
+            <div class="value-card__icon icon-container1">
+              <i data-lucide="leaf"></i>
+            </div>
+            <h3 class="value-card__title">Sustainability</h3>
+            <p class="value-card__description">We build resilient systems—financial, operational, and environmental—to ensure lasting impact</p>
+          </div>
+          
+          <div class="value-card card-elevated reveal-on-scroll" data-value-index="3">
+            <div class="value-card__icon icon-container1">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="value-card__title">Empowerment</h3>
+            <p class="value-card__description">We equip individuals with skills, opportunity, and advocacy to control their own destinies</p>
+          </div>
+          
+          <div class="value-card card-elevated reveal-on-scroll" data-value-index="4">
+            <div class="value-card__icon icon-container1">
+              <i data-lucide="shield"></i>
+            </div>
+            <h3 class="value-card__title">Integrity</h3>
+            <p class="value-card__description">We operate with transparency, accountability, and ethical stewardship in all our actions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========== OBJECTIVES SECTION ========== -->
+    <section class="objectives" aria-labelledby="objectives-heading">
+      <div class="container1">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge1 badge1--secondary">Our Goals</span>
+          <h2 id="objectives-heading" class="section-title">Objectives</h2>
+          <div class="section-divider"></div>
+        </div>
+        
+        <!-- General Objective -->
+        <div class="objectives__general card-elevated bg-gradient-teal reveal-on-scroll">
+          <div class="objectives__general-icon icon-container1">
+            <i data-lucide="target"></i>
+          </div>
+          <div class="objectives__general-content">
+            <h3 class="objectives__general-title">General Objective</h3>
+            <p class="objectives__general-text" data-content="objectives.general">
+              To foster the lasting socio-economic empowerment and full social inclusion of blind and physically disabled individuals in Ethiopia, enabling a transition from marginalization to dignified self-reliance and active community contribution.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Specific Objectives -->
+        <div class="objectives__specific">
+          <h3 class="objectives__specific-heading reveal-on-scroll">Specific Objectives</h3>
+          <div class="objectives__list" id="objectives-list">
+            <div class="objective-item reveal-slide-left" data-objective-index="0">
+              <div class="objective-item__icon">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <p class="objective-item__text">Provide market-driven vocational training in viable trades (weaving, carpet making, artisan crafts)</p>
+            </div>
+            <div class="objective-item reveal-slide-left" data-objective-index="1">
+              <div class="objective-item__icon">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <p class="objective-item__text">Generate sustainable, dignified long-term employment within Productsion units</p>
+            </div>
+            <div class="objective-item reveal-slide-left" data-objective-index="2">
+              <div class="objective-item__icon">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <p class="objective-item__text">Advocate for the rights and capabilities of persons with disabilities to dismantle societal barriers</p>
+            </div>
+            <div class="objective-item reveal-slide-left" data-objective-index="3">
+              <div class="objective-item__icon">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <p class="objective-item__text">Strengthen institutional resilience through diversified income sources and strategic asset development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ========== HISTORY/TIMELINE SECTION ========== -->
+    <section class="history bg-gradient-warm" aria-labelledby="history-heading">
+      <div class="container1">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge1 badge1--primary">Our Legacy</span>
+          <h2 id="history-heading" class="section-title" data-content="history.title">Our Journey Through Time</h2>
+          <p class="section-subtitle" data-content="history.subtitle">Six decades of resilience, adaptation, and unwavering commitment</p>
+          <div class="section-divider"></div>
+        </div>
+        
+        <div class="timeline" role="list" aria-label="Historical timeline">
+          <div class="timeline__line"></div>
+          
+          <!-- Timeline Events -->
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="0">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>1950-1960</span>
+              </div>
+              <h3 class="timeline__title">The Founding Era</h3>
+              <p class="timeline__subtitle">A Royal Endowment and a Vision Takes Root</p>
+              <p class="timeline__content">The association's genesis dates to 1952, emerging from a pioneering national commitment to address the marginalization of persons with disabilities. Its establishment was catalyzed by a transformative act of philanthropy: a grant of 28,287 square meters of prime land in Addis Ababa from His Imperial Majesty Emperor Haile Selassie I.</p>
+            </div>
+          </div>
+          
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="1">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>1960-1970</span>
+              </div>
+              <h3 class="timeline__title">National Stewardship</h3>
+              <p class="timeline__subtitle">Building Foundations and Assuming Leadership</p>
+              <p class="timeline__content">This decade marked a critical transition from foundational setup to operational expansion and national ownership. A landmark shift occurred in 1966, when management of key disability institutions was formally transferred to the Ethiopian Blind People's Association.</p>
+            </div>
+          </div>
+          
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="2">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>1970-1980</span>
+              </div>
+              <h3 class="timeline__title">Expansion Era</h3>
+              <p class="timeline__subtitle">Institutionalization Under a New Political Order</p>
+              <p class="timeline__content">Despite the complex environment following the 1974 political shift, the association demonstrated remarkable institutional resilience. It continued to expand its vocational training infrastructure with production centers across multiple regions.</p>
+            </div>
+          </div>
+          
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="3">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>1980-1990</span>
+              </div>
+              <h3 class="timeline__title">Strategic Consolidation</h3>
+              <p class="timeline__subtitle">Challenges, Adaptation, and Resilience</p>
+              <p class="timeline__content">The late 1980s presented profound challenges characterized by political instability and civil conflict. Faced with resource constraints, the association entered a phase of strategic consolidation.</p>
+            </div>
+          </div>
+          
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="4">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>1990-2000</span>
+              </div>
+              <h3 class="timeline__title">Legal Reformation</h3>
+              <p class="timeline__subtitle">Rebirth for a New Millennium</p>
+              <p class="timeline__content">On July 28, 2000, the association was officially re-registered as 'Hulegeb Training and Rehabilitation for Blind and Disabled Society Association.' This represented a strategic rebirth with modern governance structure.</p>
+            </div>
+          </div>
+          
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="5">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>2000-2010</span>
+              </div>
+              <h3 class="timeline__title">Governance Strengthening</h3>
+              <p class="timeline__subtitle">Consolidation and Pursuit of Sustainability</p>
+              <p class="timeline__content">A formal, seven-member elected Executive Committee was instituted to provide robust strategic oversight. Operational efforts centered on streamlining core vocational training programs.</p>
+            </div>
+          </div>
+          
+          <div class="timeline__item timeline-item" role="listitem" data-event-index="6">
+            <div class="timeline__node"></div>
+            <div class="timeline__card card-elevated">
+              <div class="timeline__period">
+                <i data-lucide="calendar"></i>
+                <span>2010-Present</span>
+              </div>
+              <h3 class="timeline__title">Strategic Growth</h3>
+              <p class="timeline__subtitle">Future-Focused Development</p>
+              <p class="timeline__content">Hulegeb now operates as a matured, strategically oriented institution with 85 dedicated employees maintaining nearly perfect gender balance. The central strategic undertaking is the ambitious development of modern, multipurpose facilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    
+  </main>
+    <!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Main Footer Box Start -->
+                    <div class="main-footer-box">
+                        <!-- Footer About Start -->
+                        <div class="footer-about">
+                            <!-- Footer Logo Start -->
+                            <div class="footer-logo">
+                                <img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt="">
+                            </div>
+                            <!-- Footer Logo End -->
+                            
+                            <!-- Footer Contact Detail Start -->
+                            <div class="footer-contact-detail">
+                                <div class="footer-contact-item">                                     <h3>Address</h3>                                     <p>Lideta Sub City woreda 02 Torhaylochi above Kidane Building, in front of Mezigebe berihan Primary School</p>                                     <h3><a href="tel:+251-113-7266-47">+251-113-7266-47</a></h3>                                     <h3><a href="tel:+251-113-8441-36">+251-113-8441-36</a></h3>                                     <h3><a href="tel:+251-113-2013-23">+251-113-2013-23</a></h3>                                     <h3><a href="tel:+251-113-8440-28">+251-113-8440-28</a></h3>                                                                      </div>
+                                
+                                <div class="footer-contact-item">
+                                    <p>Need live support!</p>
+                                    <h3><a href="mailto:hulegebbirhan@gmail.com">hulegebbirhan@gmail.com</a></h3>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Detail End -->
+                            
+                            <!-- Footer Social Links Start -->
+                            <div class="footer-social-links">
+                                <h3>Follow on</h3>
+                                <ul>
+                                    <li><a href="about.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="about.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="about.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="about.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
+                                </ul>
+                            </div>
+                            <!-- Footer Social Links End -->
+                        </div>
+                        <!-- Footer About End -->
+
+                        <!-- Footer Links Box Start -->
+                        <div class="footer-links-box">
+                            <!-- Newsletter Form Start -->
+                            <div class="newsletter-form">
+                                <form id="newsletterForm" action="about.html#" method="POST">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your Email" required="">
+                                        <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Newsletter Form End -->
+
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>Quick link</h3>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'services' %}">services</a></li>
+                                    <li><a href="{% url 'blog' %}">blog</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links footer-service-links">
+                                <h3>services</h3>
+                                 <ul>
+                                    <li><a href="services.html">Milling service</a></li>
+                                    <li><a href="services.html">Advocacy & Awareness Services</a></li>
+                                    <li><a href="services.html">Vocational Training & Skills Development</a></li>
+                                    <li><a href="services.html">Custom Design & Manufacturing</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>support</h3>
+                                <ul>
+                                    <li><a href="about.html#">help</a></li>
+                                    <li><a href="about.html#">privacy policy</a></li>
+                                    <li><a href="about.html#">term's & condition</a></li>
+                                    <li><a href="about.html#">support</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                        </div>
+                        <!-- Footer Links Box End -->
+                    </div>
+                    <!-- Main Footer Box End -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright Start -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Copyright Text Start -->
+                        <div class="copyright-text">
+                                                        <p>Copyright © Hulegeb Org  2026 All Rights Reserved.</p>
+                        </div>
+                        <!-- Copyright Text End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Copyright End -->
+    
+    </footer>
+<div class="progress-wrap" id="scrollTopBtn">
+        <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </div>
+    </div>
+    <!-- Main Footer Section End -->
+<div id="dante-custom-trigger" onclick="toggleDante()"></div>
+
+<div id="dante-pop-wrapper">
+
+          <iframe src="https://app.dante-ai.com/embed/?kb_id=d90b9c25-45c7-41eb-8581-c0c79f01d09a&token=9e6a0c9e-0e21-4a9e-8cfe-fa58da498041" allow="clipboard-write; clipboard-read; *;microphone *" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<script>
+  function toggleDante() {
+    var chat = document.getElementById("dante-pop-wrapper");
+    if (chat.style.display === "none" || chat.style.display === "") {
+      chat.style.display = "block";
+    } else {
+      chat.style.display = "none";
+    }
+  }
+</script>
+    <!-- Main Footer Section End -->
+
+    <!-- Jquery Library File -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <!-- Bootstrap js file -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Validator js file -->
+    <script src="{% static 'js/validator.min.js' %}"></script>
+    <!-- SlickNav js file -->
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <!-- Swiper js file -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <!-- Counter js file -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <!-- Isotop js file -->
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+    <!-- Magnific js file -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- SmoothScroll -->
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
+    <!-- Parallax js -->
+    <script src="{% static 'js/parallaxie.js' %}"></script>
+    <!-- MagicCursor js file -->
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/magiccursor.js' %}"></script>
+    <!-- Text Effect js file -->
+    <script src="{% static 'js/SplitText.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <!-- YTPlayer js File -->
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+    <!-- Wow js file -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Main Custom js file -->
+    <script src="{% static 'js/function.js' %}"></script>
+    <script src="{% static 'js/about.js' %}"></script>
+</body>
+</html>

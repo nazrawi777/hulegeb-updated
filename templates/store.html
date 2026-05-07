@@ -1,0 +1,2081 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hulegeb - Handcrafted Products by Ethiopian Artisans</title>
+  
+<meta name="description" content="Shop official Hulegeb products and merchandise. Every purchase directly funds our training and rehabilitation programs. Support a cause today.">
+<link rel="canonical" href="https://www.hulegebberhan.org/store">
+  <meta name="description" content="Hand-woven carpets, doormats, and home goods crafted by blind and physically disabled artisans. Natural sheep wool, timeless designs, sustainable social impact.">
+  <meta name="author" content="Hulegeb">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hulegeb.com/products/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hulegeb - Handcrafted Products by Ethiopian Artisans">
+  <meta property="og:description" content="Hand-woven carpets and home goods crafted by blind and physically disabled artisans.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Hulegeb",
+    "description": "Hand-woven carpets and home goods crafted by blind and physically disabled artisans in Ethiopia.",
+    "url": "https://hulegeb.com"
+  }
+  </script>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/hjxJwj9v/Hulegeb-Training-Rehabilitation-Logo-2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+	<!-- Font Awesome Icon Css-->
+	<link href="{% static 'css/all.min.css' %}" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="{% static 'css/mousecursor.css' %}">
+	<!-- Main Custom Css -->
+	<link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
+<style>/* THE "INVISIBLE GLASS" WITH VIVID BORDERS */
+ .main-menu ul li a{
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.4em;
+	padding: 14px 20px !important;
+	color: #000 !important;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+	
+}
+ .phone-icon {
+    width: 34px; /* Change to your icon's actual width */
+    height: 34px; /* Change to your icon's actual height */
+    background-color: #000; /* Your desired color */
+    
+    /* Ensure the mask fits */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+ .main-menu ul li a i{
+
+	color: #f37a20 !important;
+
+	
+}
+.hg-filter-wrapper {
+    position: relative;
+    z-index: 100;
+    
+    /* Center and Width */
+    margin: 0 auto 40px auto;
+    width: fit-content;
+    min-width: 320px;
+    max-width: 1200px;
+    display: flex;
+    padding: 12px 30px;
+
+    /* ALMOST TRANSPARENT CENTER */
+     background: rgba(217, 235, 238, 0.2);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+
+    /* THE BORDER: High visibility gradient logic */
+    /* We use a solid border colored with a hint of your brand blue */
+    border: 1px solid rgba(35, 125, 216, 0.4); 
+    border-radius: 50px; /* Pill shape looks more modern for filters */
+
+    /* THE GLOW: This makes people "see" the glass on a white background */
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.05), /* Subtle ground shadow */
+        0 0 20px rgba(35, 125, 216, 0.1); /* Soft blue outer glow */
+
+    transition: all 0.4s ease;
+}
+    
+        #abthead {
+    background-color: #f37a20;
+    color: #fff !important;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 5.6px 6.5px !important;
+}
+
+/* HOVER EFFECT: The border lights up with your primary orange */
+.hg-filter-wrapper:hover {
+    background: rgba(236, 235, 231, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 142, 1, 0.12);
+    transform: translateY(-1px);
+}
+
+/* 2. THE BUTTONS (Interactive Elements) */
+.hg-filter-btn, .hg-dropdown-trigger {
+    border: 1px solid rgba(35, 125, 216, 0.3) !important; /* Secondary Blue border translucent */
+    color: #222 !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(5px);
+    padding: 8px 22px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy animation */
+}
+
+/* 3. HOVER & ACTIVE STATES (Using Company Colors) */
+.hg-filter-btn:hover, .hg-dropdown-trigger:hover {
+    background: #237dd8 !important; /* Secondary Blue */
+    color: #fff !important;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(35, 125, 216, 0.2);
+    border-color: #237dd8 !important;
+}
+
+.hg-filter-btn.active, .hg-dropdown-trigger.active {
+    background: #f37a20 !important; /* Primary Orange */
+    color: #fff !important;
+    border-color: #f37a20 !important;
+    box-shadow: 0 8px 15px rgba(255, 142, 1, 0.3);
+}
+
+/* 4. LIQUID GLASS DROPDOWN MENUS */
+.hg-dropdown-animate {
+    display: none;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 25px !important;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    opacity: 0 ;
+    backdrop-filter: blur(15px) saturate(150%);
+    transform: translateY(15px) !important;
+    transition: all 0.3s ease;
+}
+
+.hg-dropdown-animate.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item.hg-filter-btn {
+    border: none !important;
+    background: transparent !important;
+    width: 100%;
+    text-align: left;
+    border-radius: 18px !important;
+    margin-bottom: 5px;
+    
+}
+
+.dropdown-item.hg-filter-btn:hover {
+    background: rgba(12, 53, 233, 0.262) !important; /* Light Orange Tint */
+    color: #f37a20 !important;
+    transform: translateX(2px); /* Slide right effect */
+}
+
+/* 5. PRICE RANGE STYLING (The Custom Track) */
+#hgPriceRange {
+    accent-color: #f37a20; /* Uses Primary Orange */
+}
+
+#hgPriceLabel {
+    color: #237dd8; /* Uses Secondary Blue */
+}
+
+.hg-price-box {
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+</style>
+  
+</head>
+<body>
+
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+						<div id="loading-icon"><img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="{% url 'index' %}">
+						<img src="https://i.postimg.cc/BvFLKf2m/Hulegeb-Training-Rehabilitation-Logo-1-Black-copy.png" alt="Logo">
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
+                                <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ourhistory' %}">Our Legacy</a></li>
+                                       
+                                    </ul>
+                                </li>                              
+                                
+                                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                                <li>
+    <a href="{% url 'store' %}" id="abthead">Products</a>
+</li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Our Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'programmes' %}">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'video_gallery' %}">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}">Donation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> 
+                                <li>
+    <a href="{% url 'admin:index' %}">
+        <i class="fa-solid fa-user"></i>
+    </a>
+</li>                        
+                            </ul>
+                        </div>
+                        <!-- Contact Now Box Start -->
+                        <div class="contact-now-box">
+                            <div class="icon-box">
+    <div class="phone-icon" style="-webkit-mask-image: url('{% static 'images/icon-phone.svg' %}'); mask-image: url('{% static 'images/icon-phone.svg' %}');"></div>
+    </div>
+                            <div class="contact-now-box-content">
+                                <p>need help !</p>
+                                <h3><a href="tel:+251-11-3-72-66-47">+251-11-3-72-66-47</a></h3>                                
+                            </div>
+                        </div>
+                        <!-- Contact Now Box End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+  <!-- Skip Link -->
+  <!-- Skip Link -->
+  
+
+  <!-- Impact Section -->
+  <section class="impact-section" aria-labelledby="impact-heading">
+    <h2 id="impact-heading">Our Community Impact</h2>
+    
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="impact-value" data-counter data-target="525" data-max="600">0</div>
+        <div class="impact-label">Jobs Created</div>
+        <div class="impact-progress">
+          <div class="impact-progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="impact-value" data-counter data-target="18480" data-max="19000">0</div>
+        <div class="impact-label">Training Hours</div>
+        <div class="impact-progress">
+          <div class="impact-progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m7.5 4.27 9 5.15"/>
+            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+            <path d="m3.3 7 8.7 5 8.7-5"/>
+            <path d="M12 22V12"/>
+          </svg>
+        </div>
+        <div class="impact-value" data-counter data-target="695905" data-max="800000">0</div>
+        <div class="impact-label">Products Sold</div>
+        <div class="impact-progress">
+          <div class="impact-progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+        </div>
+        <div class="impact-value" data-counter data-target="15" data-max="19">0</div>
+        <div class="impact-label">Communities</div>
+        <div class="impact-progress">
+          <div class="impact-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+<section id="products" class="products-section px-3" aria-labelledby="products-heading">
+  <div class="products-header text-center mb-5">
+    <h2 id="products-heading">Browse Our Collection</h2>
+    <p>Experience the tangible difference of craftsmanship that empowers</p>
+  </div>
+
+<div class="container-fluid mb-5">
+    <div class="hg-filter-wrapper d-flex flex-wrap align-items-center justify-content-center gap-3">    
+        <button class="btn hg-filter-btn btn-dark active" data-cat="all">All</button>
+        <button class="btn hg-filter-btn btn-outline-dark" data-cat="sanitary">Sanitary</button>
+
+        <div class="dropdown position-relative">
+            <button class="btn btn-outline-dark hg-dropdown-trigger" type="button">
+                Woven Fabric <i class="fa-solid fa-chevron-down ms-1" style="font-size: 12px;"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 hg-dropdown-animate mt-2">
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="all">All Woven</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="drapes">Drapes</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="bedding">Bedding</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="woven-fabric" data-sub="clothes">Clothes</button></li>
+            </ul>
+        </div>
+
+        <button class="btn hg-filter-btn btn-outline-dark" data-cat="furniture">Furniture</button>
+
+        <div class="dropdown position-relative">
+            <button class="btn btn-outline-dark hg-dropdown-trigger" type="button">
+                Room Decoration <i class="fa-solid fa-chevron-down ms-1" style="font-size: 12px;"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 hg-dropdown-animate mt-2">
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="all">All Decoration</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="carpet">Carpet</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="doormat">Doormat</button></li>
+                <li><button class="dropdown-item hg-filter-btn" data-cat="room-decoration" data-sub="cotton-mats">Cotton Mats</button></li>
+            </ul>
+        </div>
+
+        <div class="ms-lg-4" style="min-width: 200px;">
+            <div class="d-flex justify-content-between mb-1">
+                <span class="small fw-bold text-muted text-uppercase">Max Price:</span>
+                <span id="hgPriceLabel" class="small fw-bold text-primary">15,000 ETB</span>
+            </div>
+            <input type="range" class="form-range" id="hgPriceRange" min="0" max="15000" step="100" value="15000">
+        </div>
+    </div>
+</div>
+
+  <div class="products-grid" id="products-grid"></div>
+</section>
+
+
+    <!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Main Footer Box Start -->
+                    <div class="main-footer-box">
+                        <!-- Footer About Start -->
+                        <div class="footer-about">
+                            <!-- Footer Logo Start -->
+                            <div class="footer-logo">
+                                <img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt="">
+                            </div>
+                            <!-- Footer Logo End -->
+                            
+                            <!-- Footer Contact Detail Start -->
+                            <div class="footer-contact-detail">
+                                <div class="footer-contact-item">                                     <h3>Address</h3>                                     <p>Lideta Sub City woreda 02 Torhaylochi above Kidane Building, in front of Mezigebe berihan Primary School</p>                                     <h3><a href="tel:+251-113-7266-47">+251-113-7266-47</a></h3>                                     <h3><a href="tel:+251-113-8441-36">+251-113-8441-36</a></h3>                                     <h3><a href="tel:+251-113-2013-23">+251-113-2013-23</a></h3>                                     <h3><a href="tel:+251-113-8440-28">+251-113-8440-28</a></h3>                                                                      </div>
+                                
+                                <div class="footer-contact-item">
+                                    <p>Need live support!</p>
+                                    <h3><a href="mailto:hulegebbirhan@gmail.com">hulegebbirhan@gmail.com</a></h3>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Detail End -->
+                            
+                            <!-- Footer Social Links Start -->
+                            <div class="footer-social-links">
+                                <h3>Follow on</h3>
+                                <ul>
+                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
+                                </ul>
+                            </div>
+                            <!-- Footer Social Links End -->
+                        </div>
+                        <!-- Footer About End -->
+
+                        <!-- Footer Links Box Start -->
+                        <div class="footer-links-box">
+                            <!-- Newsletter Form Start -->
+                            <div class="newsletter-form">
+                                <form id="newsletterForm" action="#" method="POST">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your Email" required="">
+                                        <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Newsletter Form End -->
+
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>Quick link</h3>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'services' %}">services</a></li>
+                                    <li><a href="{% url 'blog' %}">blog</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links footer-service-links">
+                                <h3>services</h3>
+                                <ul>
+                                    <li><a href="services.html">Milling service</a></li>
+                                    <li><a href="services.html">Advocacy & Awareness Services</a></li>
+                                    <li><a href="services.html">Vocational Training & Skills Development</a></li>
+                                    <li><a href="services.html">Custom Design & Manufacturing</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>support</h3>
+                                <ul>
+                                    <li><a href="#">help</a></li>
+                                    <li><a href="#">privacy policy</a></li>
+                                    <li><a href="#">term's & condition</a></li>
+                                    <li><a href="#">support</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                        </div>
+                        <!-- Footer Links Box End -->
+                    </div>
+                    <!-- Main Footer Box End -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright Start -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Copyright Text Start -->
+                        <div class="copyright-text">
+                                                        <p>Copyright Â© Hulegeb Org  2026 All Rights Reserved.</p>
+                        </div>
+                        <!-- Copyright Text End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Copyright End -->
+    
+    </footer>
+<div class="progress-wrap" id="scrollTopBtn">
+        <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </div>
+    </div>
+    <!-- Main Footer Section End -->
+<div id="dante-custom-trigger" onclick="toggleDante()"></div>
+
+<div id="dante-pop-wrapper">
+  <iframe src="https://app.dante-ai.com/embed/?kb_id=d90b9c25-45c7-41eb-8581-c0c79f01d09a&token=9e6a0c9e-0e21-4a9e-8cfe-fa58da498041" allow="clipboard-write; clipboard-read; *;microphone *" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<script>
+  function toggleDante() {
+    var chat = document.getElementById("dante-pop-wrapper");
+    if (chat.style.display === "none" || chat.style.display === "") {
+      chat.style.display = "block";
+    } else {
+      chat.style.display = "none";
+    }
+  }
+</script>
+    <!-- Main Footer Section End -->
+ <!-- Artisan Modal -->
+  <div id="artisan-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="artisan-modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="artisan-modal-title">Meet Our Artisan</h3>
+        <button class="modal-close" data-close-artisan-modal aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="artisan-profile">
+          <div class="artisan-avatar">ðŸ‘¤</div>
+          <h4 class="artisan-name">Desta Bekele</h4>
+          <p class="artisan-role">Master Carpet Weaver</p>
+        </div>
+        <p class="artisan-story">
+          Desta lost his sight at age 12 but discovered weaving at the Hulegeb training center. Today, he leads our carpet workshop and has trained 23 new artisans. His intricate geometric patterns have become signature designs that customers request by name.
+        </p>
+        <div class="artisan-stats">
+          <div class="artisan-stat">
+            <div class="artisan-stat-value">8</div>
+            <div class="artisan-stat-label">Years Experience</div>
+          </div>
+          <div class="artisan-stat">
+            <div class="artisan-stat-value">156</div>
+            <div class="artisan-stat-label">Products Created</div>
+          </div>
+          <div class="artisan-stat">
+            <div class="artisan-stat-value">23</div>
+            <div class="artisan-stat-label">Artisans Trained</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary" onclick="alert('Certificate download would start here'); return false;">
+          Download Certificate
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+<script>
+// === HULEGEB INLINE PRODUCTS - FULLY CLEANED (all × → x) ===
+const PRODUCTS = [
+   {
+    slug: "Crimson-Track Brush",
+    title: "Crimson-Track Brush",
+    brand: "Crimson-Track Brush",
+    sku: "HLG-DOOR-001",
+    price: 450, // Fixed to match lowest variant
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    description: "<p>Fabric Type Hand woven Cotton Fabric.</p><ul><li>Base Material Natural Light Wood / Beech-wood</li><li>Bristles color Vibrant Red / Crimson</li><li>Design Strip brush format, Compact profile, Linear geometry</li><li>Best Use Specialized cleaning, </li><li>Style Polished wood surface, Synthetic bristles</li><li>Dimension (5×7×115 cm)</li></ul>",
+    inventory: 200,
+    default_variant: "small",
+    variants: [
+      { slug: "small", name: "Small", price: 450, inventory: 80, hex: "#C9B79C", images: ["front", "45"] },
+      { slug: "medium", name: "Medium", price: 650, inventory: 80, hex: "#C9B79C", images: ["front", "45"] },
+      { slug: "large", name: "Large", price: 950, inventory: 40, hex: "#C9B79C", images: ["front", "45"] }
+    ],
+    sizes: ["small", "medium", "large"],
+    attributes: { material: "sheep hair + cotton", function: "entryway scraping" },
+    images: [
+      "https://i.postimg.cc/WzKT9nPp/image.png",
+    ],
+  },
+  {
+    slug: "Artisan-Block Brush",
+    title: "Artisan-Block Brush",
+    brand: "Artisan-Block Brush",
+    sku: "HLG-MOP-001",
+    price: 450,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    description: "<p>Design Hand woven Cotton Fabric</p><ul><li> Base Material Natural Light Wood / Beech-wood</li><li>Bristles color Dense Red</li><li>Design Handheld block design, Natural wood finish</li><li>Best Use Heavy-duty scrubbing</li><li>Style Polished wood surface, Synthetic bristles</li><li>Dimension 7x8.5x23 cm</li></ul>",
+    inventory: 150,
+    default_variant: "braided-white",
+    variants: [
+      { slug: "braided-white", name: "Braided White Mop", price: 450, inventory: 60, hex: "#FFFFFF", images: ["front", "45"] },
+      { slug: "braided-black", name: "Braided Black Mop", price: 450, inventory: 50, hex: "#111111", images: ["front", "45"] },
+      { slug: "fringed-black", name: "Fringed Black Mop", price: 500, inventory: 40, hex: "#111111", images: ["front", "45"] }
+    ],
+    attributes: { handle_length_m: 1.3, head_width_cm: 27, material: "wood + cotton thread" },
+    image: "https://i.postimg.cc/pVqv1F6M/Gemini-Generated-Image-6q8xay6q8xay6q8x-(1).png"
+  },
+  {
+    slug: "Bottle Brush",
+    title: "Bottle Brush",
+    brand: "Bottle Brush",
+    sku: "HLG-BRMW-001",
+    price: 300,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "Extra-long handle broom made from natural fiber and libeng material for large-area cleaning.",
+    description: "<p>Design Hand woven Cotton Fabric</p><ul><li>Handle Metallic Silver</li><li>Bristles color Bright Yellow</li><li>Design Flexible tube design, Chain handle, Cylindrical bristle profile</li><li>Style Flexible tube, Chain handle, Twisted wire core</li><li>Dimension: </li></ul>",
+    inventory: 120,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard Broom", price: 700, inventory: 120, hex: "#8B6B4A", images: ["front", "45"] }
+    ],
+    attributes: { handle_length_m: 1.3, material: "fiber + libeng" },
+    image: "https://i.postimg.cc/Kv0YLV21/Gemini_Generated_Image_o1x66uo1x66uo1x6_(1).png"
+  },
+  {
+    slug: "Green-Globe Brush",
+    title: "Green-Globe Brush",
+    brand: "Hulegeb",
+    sku: "HLG-GBR-001",
+    price: 220,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "50cm total length glass washing brush with textured 16cm head; available in yellow, green, red.",
+    description: "<p>Material Synthetic bristles, Twisted wire core, Heavy-duty link</p><ul><li>Handle Metallic Silver (Steel chain)</li><li>Bristles color Vibrant Green</li><li>Design Spherical brush head, Chain-link handle, Slender profile</li><li>Best Use Bottle and flask cleaning</li><li>Best Use Bottle and flask cleaning</li><li>Style Flexible tube, Chain handle, Twisted wire core</li><li>Dimension: </li></ul>",
+    inventory: 300,
+    default_variant: "yellow",
+    variants: [
+      { slug: "yellow", name: "Yellow", price: 220, inventory: 100, hex: "#FFD200", images: ["front", "45"] },
+      { slug: "green", name: "Green", price: 220, inventory: 100, hex: "#00A86B", images: ["front", "45"] },
+      { slug: "red", name: "Red", price: 220, inventory: 100, hex: "#E53935", images: ["front", "45"] }
+    ],
+    attributes: { length_cm: 50, brush_head_cm: 16, handle: "twisted metal wire" },
+    image: "https://i.postimg.cc/Bb1CDD8C/image.png"
+  },
+  {
+    slug: "Red Bristle Brush",
+    title: "Red Bristle Brush",
+    brand: "Hulegeb",
+    sku: "HLG-SBR-001",
+    price: 120,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "Compact 10.5cm brush for fine-detail cleaning. Colors: red, yellow, green.",
+    description: "<p>Red Bristle Brush</p><ul><li>Handle Metallic Silver / Gray (Metal)</li><li>Bristles color Vibrant Red</li><li>Design Long-handle configuration, Block brush head, Ergonomic reach</li><li>Best Use Bottle and flask cleaning, Floor scrubbing</li><li>Style Flexible tube, Chain handle, Twisted wire core</li><li>Dimension: </li></ul>",
+    inventory: 400,
+    default_variant: "red",
+    variants: [
+      { slug: "red", name: "Red", price: 120, inventory: 140, hex: "#E53935", images: ["front"] },
+      { slug: "yellow", name: "Yellow", price: 120, inventory: 130, hex: "#FFD200", images: ["front"] },
+      { slug: "green", name: "Green", price: 120, inventory: 130, hex: "#00A86B", images: ["front"] }
+    ],
+    attributes: { length_cm: 10.5, width_cm: 5, material: "fiber + liben" },
+    image: "https://i.postimg.cc/5N2CZ89w/Gemini-Generated-Image-fymzspfymzspfymz-(1).png"
+  },
+  {
+    slug: "Toilet Scrub Brush",
+    title: "Toilet Scrub Brush",
+    brand: "Hulegeb",
+    sku: "HLG-LBR-001",
+    price: 260,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "Robust large brush for floors and outdoor spaces. Colors: red, yellow, green.",
+    description: "<p>Toilet Scrub Brush</p><ul><li>Material Hardwood handle, synthetic bristles, Strong anchoring</li><li>Handle Natural Wood / Light Brown</li><li>Bristles color Yellow and Blue, Red</li><li>Design Round brush head, Ergonomic wooden, Compact profile</li><li>Best Use Toilet and bathroom cleaning</li><li>Style Polished wood</li><li>Dimension: </li></ul>",
+    inventory: 220,
+    default_variant: "red",
+    variants: [
+      { slug: "red", name: "Red", price: 260, inventory: 80, hex: "#E53935", images: ["front", "45"] },
+      { slug: "yellow", name: "Yellow", price: 260, inventory: 70, hex: "#FFD200", images: ["front", "45"] },
+      { slug: "green", name: "Green", price: 260, inventory: 70, hex: "#00A86B", images: ["front", "45"] }
+    ],
+    attributes: { length_cm: 27, width_cm: 7.5, material: "fiber + liben" },
+    image: "https://i.postimg.cc/d3jG8KRj/Gemini-Generated-Image-30xs5t30xs5t30xs-(1).png"
+  },
+ 
+  {
+    slug: "Precision Strip Brush",
+    title: "Precision Strip Brush",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-001",
+    price: 220,
+    currency: "ETB",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    short_description: "Handwoven fabric sold by the meter. 1mx9m rolls available. Use for bedding, drapes, or custom projects.",
+    description: "<p>Precision Strip Brush</p><ul><li>Fabric Type Hand woven Cotton Fabric</li><li>Base Material Natural Light Wood Beech wood tone</li><li>Bristles color Deep Blue / Royal Blue</li><li>Design Minimalist Geometry, Long Narrow profile</li><li>Best Use Specialized industrial tool</li><li>Style Long-handle, Broad brush head, Industrial style</li><li>Dimension: </li></ul>",
+    inventory: 1000,
+    default_variant: "per_meter",
+    variants: [
+      { slug: "per_meter", name: "Per Meter", price: 220, inventory: 1000, hex: "#D8C9B3", images: ["front"] }
+    ],
+    attributes: { width_m: 1, roll_length_m: 9, material: "cotton / blended fabrics" },
+    image: "https://i.postimg.cc/vmZ2T0yd/Copilot_20260317_082853.png"
+  },
+  {
+    slug: "Gold Utility Brush",
+    title: "Gold Utility Brush",
+    brand: "Hulegeb",
+    sku: "HLG-DRP-001",
+    price: 200,
+    currency: "ETB",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Gold Utility Brush</p><ul><li>Material Soft synthetic, Polished wood body, Durable anchoring</li><li>Handle Base Natural Wood / Light Brown</li><li>Bristles color Soft Yellow / Goldenrod</li><li>Design Handheld utility, Wooden block base, Ergonomic form</li><li>Best Use Delicate scrubbing, Dusting and sweeping</li><li>Style Warm and approachable, soft yellow</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/sX6r1MqV/Gemini-Generated-Image-6q4amd6q4amd6q4a-(1).png"
+  },
+  {
+    slug: "classic-sweep-broom",
+    title: "Classic-Sweep Broom",
+    brand: "Hulegeb",
+    sku: "HLG-BRM-001",
+    price: 180,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Classic-Sweep Broom</p><ul><li>Material: Wood, synthetic bristles, Secure connection</li><li>Handle: Solid wood handle</li><li>Bristles color: Vibrant Red</li><li>Design: Smooth, Long-handle, Rectangular brush, Classic silhouette</li><li>Best Use: To wash indoor and outdoor</li><li>Style: Dense bristle packing, Robust assembly, Rectangular brush head</li><li>Dimension: 2.5x23x130 cm</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/3Jhs7CdS/Copilot-20260317-084053.png"
+  },
+  {
+    slug: "zone-broom",
+    title: "Zone Broom",
+    brand: "Hulegeb",
+    sku: "HLG-BRM-002",
+    price: 180,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Zone Broom</p><ul><li>Material: Wooden handles, Synthetic bristles, Sturdy construction</li><li>Handle: Natural Wood / Light Brown (Both)</li><li>Bristles color: Deep Red and Vibrant Yellow bristles</li><li>Design: Pair configuration, Ergonomic length, Symmetrical layout</li><li>Best Use: Indoor/Outdoor sweeping</li><li>Style: Dense bristle packing, Robust assembly, Rectangular brush head</li><li>Dimension: 2.5x23x130 cm</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/cCzt74gc/Gemini-Generated-Image-t5hf0tt5hf0tt5hf-(2).png"
+  },
+  {
+    slug: "yellow-grapples-broom",
+    title: "Yellow Grapples Broom",
+    brand: "Hulegeb",
+    sku: "HLG-BRM-003",
+    price: 1800,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Yellow Grapples Broom</p><ul><li>Material: Soft synthetic, Polished wood body, Sleek Silver</li><li>Handle Base: Natural Wood handle</li><li>Bristle Color: Yellow bristles</li><li>Design: Handheld block, Unified shape, Bristle profile</li><li>Best Use: Color-coded cleaning, Detail scrubbing, sweeping Accessories</li><li>Style: Warm and approachable, soft yellow</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/yN69z5HJ/Copilot-20260317-084826.png"
+  },
+  {
+    slug: "red-grapples-broom",
+    title: "Red Grapples Broom",
+    brand: "Hulegeb",
+    sku: "HLG-BRM-004",
+    price: 1800,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Red Grapples Broom</p><ul><li>Material: Soft synthetic, Polished wood body, Sleek Silver</li><li>Handle Base: Natural Wood handle</li><li>Bristle Color: Deep Red bristles</li><li>Design: Handheld block, Unified shape, Bristle profile</li><li>Best Use: Color-coded cleaning, Detail scrubbing, sweeping Accessories</li><li>Style: Warm and approachable, soft yellow</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/k58rqjFp/Copilot-20260317-085418.png"
+  },
+  {
+    slug: "white-braid-mop",
+    title: "White Braid Mop",
+    brand: "Hulegeb",
+    sku: "HLG-MOP-005",
+    price: 180,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>White Braid Mop</p><ul><li>Material: Wooden handles, Sturdy construction</li><li>Handle: Natural Wood</li><li>Color: Light Beige / Natural White cotton strands</li><li>Design: Braided mop head, Long wooden</li><li>Best Use: Indoor/Outdoor sweeping</li><li>Style: Dense bristle packing, Robust assembly, Rectangular brush head</li><li>Dimension: D- 2.5 L-130</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/SRxt2VCX/Gemini-Generated-Image-f3lpmcf3lpmcf3lp-(1).png"
+  },
+  {
+    slug: "black-braid-mop",
+    title: "Black Braid mop",
+    brand: "Hulegeb",
+    sku: "HLG-MOP-006",
+    price: 180,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Black Braid mop</p><ul><li>Material: Wooden handles, Sturdy construction</li><li>Handle: Solid wood</li><li>Color: Deep Black</li><li>Design: Braided mop head, Long wooden</li><li>Best Use: Indoor/Outdoor sweeping</li><li>Style: Dense bristle packing, Robust assembly, Rectangular brush head</li><li>Dimension: D- 2.5 L-130</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/k4BT7Dm6/Copilot-20260317-090034.png"
+  },
+  {
+    slug: "fringed-mop",
+    title: "Fringed Mop",
+    brand: "Hulegeb",
+    sku: "HLG-MOP-007",
+    price: 1800,
+    currency: "ETB",
+    category: "sanitary",
+    subcategory: "all",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Fringed Mop</p><ul><li>Material: Wooden handles, Sturdy construction</li><li>Handle: Natural Wood</li><li>Color: Deep Black</li><li>Design: Fringed mop head</li><li>Best Use: Indoor/Outdoor sweeping</li><li>Style: Dense bristle packing, Robust assembly, Rectangular brush head</li><li>Dimension: 2.5x23x130 cm</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/pL81rC74/image.png"
+  },
+  {
+    slug: "diamond-lattice-rugs",
+    title: "Diamond Lattice Rugs",
+    brand: "Hulegeb",
+    sku: "HLG-CPT-008",
+    price: 5280,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "carpet",
+    short_description: "kare 2200 birr * (1.20m*2m)=5280 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Diamond Lattice Rugs</p><ul><li>Material: Soft synthetic, Polished wood body, Sleek Silver</li><li>Pattern colors: Contrasting Black and White</li><li>Color: Light Brown / Beige</li><li>Texture: Flat-weave, Hand-woven craft, Flexible drape</li><li>Best Use: Floor Layer</li><li>Style: Diamond geometric pattern, Decorative fringe</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/pL81rC74/image.png"
+  },
+  {
+    slug: "dense-diamond-lattice-rugs",
+    title: "Dense Diamond Lattice Rugs",
+    brand: "Hulegeb",
+    sku: "HLG-CPT-009",
+    price: 10125,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "carpet",
+    short_description: "kare 2250 birr * (1.50m*3m)=10,125 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Dense Diamond Lattice Rugs</p><ul><li>Material: Soft synthetic, Polished wood body, Sleek Silver</li><li>Pattern colors: Contrasting Black and White</li><li>Color: Light Brown / Beige</li><li>Texture: Flat-weave, Hand-woven craft, Flexible drape</li><li>Best Use: Floor Layer</li><li>Style: Diamond geometric pattern, Decorative fringe</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/9fY8tMcw/image.png"
+  },
+  {
+    slug: "neutral-border-rugs",
+    title: "Neutral Border Rugs",
+    brand: "Hulegeb",
+    sku: "HLG-CPT-010",
+    price: 13200,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "carpet",
+    short_description: "kare 2200 birr * (2m*3m)=13,200 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Neutral Border Rugs</p><ul><li>Material: Soft synthetic, Polished wood body, Sleek Silver</li><li>Pattern colors: Deep Black, Brown and Light Tan</li><li>Color: Light Beige / Natural Cream</li><li>Texture: Thick pile / Dense weave, Soft yet durable</li><li>Best Use: Living room centerpiece</li><li>Style: Rectangle pattern, Decorative fringe</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/pL81rC74/image.png"
+  },
+  {
+    slug: "dense-neutral-border-rugs",
+    title: "Dense Neutral Border Rugs",
+    brand: "Hulegeb",
+    sku: "HLG-CPT-011",
+    price: 4500,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "carpet",
+    short_description: "kare 2250 birr * (1m*2m)=4500 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Dense Neutral Border Rugs</p><ul><li>Material: Soft synthetic, Polished wood body, Sleek Silver</li><li>Pattern colors: Deep Black, Brown and Light Tan</li><li>Color: Light Beige / Natural Cream</li><li>Texture: Thick pile / Dense weave, Soft yet durable</li><li>Best Use: Living room centerpiece</li><li>Style: Rectangle pattern, Decorative fringe</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/9fY8tMcw/image.png"
+  },
+  {
+    slug: "gondar-mist-rugs",
+    title: "Gondar Mist Rugs",
+    brand: "Hulegeb",
+    sku: "HLG-CPT-012",
+    price: 9000,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "carpet",
+    short_description: "kare 2250 birr * (2m*2m)= 9000 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Gondar Mist Rugs</p><ul><li>Pattern: Solid field, Minimalist aesthetic, Versatile look, Simple elegance</li><li>Visual Tone: Neutral, modern</li><li>Color: Soft Light Gray</li><li>Texture: Soft and cozy, Medium weight, Breathable</li><li>Best Use: Floor Layer, Cool Climate Comfort</li><li>Style: Diamond geometric pattern, Decorative fringe</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/fR4BGXLL/image.png"
+  },
+  {
+    slug: "dense-mist-rugs",
+    title: "Dense Mist Rugs",
+    brand: "Hulegeb",
+    sku: "HLG-CPT-013",
+    price: 13500,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "carpet",
+    short_description: "kare 2250 birr * (2m*3m)=13,500 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Dense Mist Rugs</p><ul><li>Pattern: Solid field, Minimalist aesthetic, Versatile look, Simple elegance</li><li>Visual Tone: Neutral, modern</li><li>Color: Soft Light Gray</li><li>Texture: Soft and cozy, Medium weight, Breathable</li><li>Best Use: Floor Layer, Cool Climate Comfort</li><li>Style: Diamond geometric pattern, Decorative fringe</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/fR4BGXLL/image.png"
+  },
+  {
+    slug: "abyssinian-cloud-cotton-mats",
+    title: "Abyssinian Cloud Cotton mats",
+    brand: "Hulegeb",
+    sku: "HLG-MAT-014",
+    price: 1152,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "cotton-mats",
+    short_description: "kare 480 birr * (1.20m*2m)=1152birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Abyssinian Cloud Cotton mats</p><ul><li>Pattern: Solid / Plain, Stacked presentation, Commercial layout</li><li>Visual Tone: Neutral, modern</li><li>Color: Pure White / Snow White</li><li>Texture: Plush / Terry, Thick weave, Soft hand feel</li><li>Best Use: Bath and Spa use, Hospitality industry</li><li>Style: Uniform cut, Bordered edges</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/0QNfY0tZ/image.png"
+  },
+  {
+    slug: "cream-knot-mats",
+    title: "Cream Knot Mats",
+    brand: "Hulegeb",
+    sku: "HLG-MAT-015",
+    price: 1875,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "cotton-mats",
+    short_description: "kare 2500 birr * (50cm*1.50m)= 1875 birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Cream Knot Mats</p><ul><li>Pattern: Earthy Brown with subtle dark outlines</li><li>Visual Tone: warm brown geometric</li><li>Color: Soft Cream / Natural Ivory</li><li>Texture: Plush / Terry, Thick weave, Soft hand feel</li><li>Best Use: Home décor</li><li>Style: Fringed edges, Balanced spacing</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/c12pJvCG/image.png"
+  },
+  {
+    slug: "cream-knot-mats-variant",
+    title: "Cream Knot Mats",
+    brand: "Hulegeb",
+    sku: "HLG-MAT-016",
+    price: 2700,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "cotton-mats",
+    short_description: "kare 2500 birr * (60cm*1.80m)=2700birr,1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Cream Knot Mats</p><ul><li>Pattern: Earthy Brown with subtle dark outlines</li><li>Visual Tone: warm brown geometric</li><li>Color: Soft Cream / Natural Ivory</li><li>Texture: Plush / Terry, Thick weave, Soft hand feel</li><li>Best Use: Home décor</li><li>Style: Fringed edges, Balanced spacing</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/c12pJvCG/image.png"
+  },
+  {
+    slug: "midnight-weave-doormats",
+    title: "Midnight Weave Doormats",
+    brand: "Hulegeb",
+    sku: "HLG-DOR-017",
+    price: 350,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "doormat",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Midnight Weave Doormats</p><ul><li>Design: Rectangular mat format, Fringed ends, Vertical woven band detail</li><li>Visual Tone: warm brown geometric</li><li>Color: Deep Charcoal Black / Dark Navy Blue</li><li>Texture: Plush / Terry, Thick weave, Soft hand feel</li><li>Best Use: Entryway or bedside mat</li><li>Style: Fringed edges, Balanced spacing</li><li>Dimension: 0.5x50x80 cm</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/ncqPcTN4/image.png"
+  },
+  {
+    slug: "desert-heritage-doormats",
+    title: "Desert Heritage Doormats",
+    brand: "Hulegeb",
+    sku: "HLG-DOR-018",
+    price: 480,
+    currency: "ETB",
+    category: "room-decoration",
+    subcategory: "doormat",
+    short_description: "1mx9m handwoven drapes in Ethiopian motifs or contemporary patterns. Customizable.",
+    description: "<p>Desert Heritage Doormats</p><ul><li>Design: Rectangular mat format, Fringed ends, Panel and motif variation</li><li>Visual Tone: Warm Brown, Cocoa Brown</li><li>Color: Natural Beige / Sand</li><li>Texture: Plush / Terry, Thick weave, Soft hand feel</li><li>Best Use: Living room or bedroom mat</li><li>Style: Fringed edges, Balanced spacing</li><li>Dimension: 0.5x50x80 cm</li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/kXNTdGtp/image.png"
+  },
+  {
+    slug: "collar-whisper",
+    title: "Collar Whisper",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-019",
+    price: 300,
+    currency: "ETB",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    short_description: " kare 250* 1.20m=300birr",
+    description: "<p>Collar Whisper</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Cream/Off white with collar accent stripe</li><li>Texture: Soft, Breathable, Lightweight</li><li>Best Use: Gabi, Netela, scarf, table linen, home decor</li><li>Style: Elegant Minimal, Traditional- Modern Blend</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/13JMfdB4/image.png"
+  },
+  {
+    slug: "royal-heritage-gold-stripe",
+    title: "Royal Heritage Gold Stripe",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-020",
+    price: 375,
+    currency: "ETB",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    short_description: " kare 250* 1.50m=375birr.",
+    description: "<p>Royal Heritage Gold Stripe</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Deep marrow/burgundy/ gold /mustard yellow</li><li>Texture: Medium weight, durable</li><li>Best Use: Gabi, cultural wear, decorative</li><li>Style: Rich, ceremonial, heritage-inspire</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    default_variant: "standard",
+    variants: [
+      { slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3", images: ["front", "45"] }
+    ],
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/RVmTGmbn/image.png"
+  },
+  {
+    slug: "golden-sand-heritage-stripe",
+    title: "Golden sand Heritage Stripe",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-021",
+    price: 1100,
+    currency: "ETB",
+    short_description: "kare 250* 4.40m= 1100 birr.",
+    description: "<p>Golden sand Heritage Stripe</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Cream / off-white base golden stripe</li><li>Texture: Soft, Breathable, medium weight</li><li>Best Use: Gabi, netela, kuta, table textile, home decor</li><li>Style: Warm, earthy, heritage-inspire</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/K8vDSNb1/image.png",
+    variants: [{ slug: "gs-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#F5DEB3" }]
+  },
+  {
+    slug: "ash-grey-classic-border",
+    title: "Ash Grey Classic Border",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-022",
+    price: 300,
+    currency: "ETB",
+    short_description: " kare 250* 1.20m=300birr,Subtle, classic, elegant heritage handwoven cloth.",
+    description: "<p>Ash Grey Classic Border</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Light grey/soft ash</li><li>Texture: Medium weight, smooth, Breathable</li><li>Best Use: Gabi, Netela, scarf, formal traditional wear</li><li>Style: Subtle, classic, elegant heritage</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/yNDhW8k1/image.png",
+    variants: [{ slug: "ag-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#B2BEB5" }]
+  },
+  {
+    slug: "unity-heritage",
+    title: "Unity Heritage",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-023",
+    price: 375,
+    currency: "ETB",
+    short_description: " kare 250* 1.50m=375birr, Cultural, Symbolic, vibrant heritage textile.",
+    description: "<p>Unity Heritage</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Bright white base</li><li>Stripe: Green, yellow, red</li><li>Texture: Soft, lightweight, breathable</li><li>Best Use: Gabi, Netela, Cultural wear, Ceremonial textile</li><li>Style: Cultural, Symbolic, vibrant heritage</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/43Hts2S4/image.png",
+    variants: [{ slug: "uh-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FFFFFF" }]
+  },
+  {
+    slug: "golden-sun-heritage-weave",
+    title: "Golden Sun Heritage Weave",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-024",
+   price: 750,
+    short_description: "Price: kare 250 * 3m = 750. Bright, elegant traditional weave.",
+    currency: "ETB",
+   
+    description: "<p>Golden Sun Heritage Weave</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Golden Yellow/Mustard</li><li>Texture: soft, smooth, lightweight</li><li>Best Use: Gabi, Netela, Scarf, Shawl, Ceremonial Textile</li><li>Style: Bright, elegant, timeless traditional</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/P5PvQFhJ/image.png",
+    variants: [{ slug: "gs-weave", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FFD700" }]
+  },
+  {
+    slug: "meskel-check-heritage-cloth",
+    title: "Meskel Check Heritage Cloth",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-025",
+    price: 2250,
+    currency: "ETB",
+    short_description: " kare 250* 9m=2250birr,Deep Red and Cream check heritage cloth.",
+    description: "<p>Meskel Check Heritage Cloth</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Deep Red, Cream</li><li>Stripe: Light Brown / Beige tones</li><li>Texture: Medium-weight with a firm yet flexible feel</li><li>Best Use: table covers, scarves, wraps, and decorative textiles</li><li>Style: Evenly spaced horizontal and vertical lines</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/vm5B0JKr/image.png",
+    variants: [{ slug: "mc-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#8B0000" }]
+  },
+  {
+    slug: "buna-stripe-vibrant",
+    title: "Buna Stripe Vibrant",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-026",
+    price: 1800,
+    currency: "ETB",
+    short_description: "Green, Orange, White vibrant handwoven stripe.",
+    description: "<p>Buna Stripe Vibrant</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Green, Orange, White</li><li>Stripe: Yellow hints within the weave</li><li>Texture: Lightweight to medium-weight fabric</li><li>Best Use: scarves, shawls, runners, and light throws</li><li>Style: Dense, rhythmic line repetition, Clean and vibrant design</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/NFjjf5jS/image.png",
+    variants: [{ slug: "bs-vibrant", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FF8C00" }]
+  },
+  {
+    slug: "nile-horizon-stripe",
+    title: "Nile Horizon Stripe",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-027",
+    price: 400,
+    currency: "ETB",
+    short_description: "White base with Blue, Olive, and Black stripes.",
+    description: "<p>Nile Horizon Stripe</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: White / Off-white</li><li>Stripe: Blue, Olive Green, Black</li><li>Texture: Medium-weight fabric with a soft, absorbent feel</li><li>Best Use: towels, scarves, wraps, table runners, and utility textiles</li><li>Style: Horizontal stripe pattern concentrated near one edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/X7XYRGhW/image.png",
+    variants: [{ slug: "nh-stripe", name: "Standard 1mx9m", price: 400, inventory: 150, hex: "#000080" }]
+  },
+  {
+    slug: "classic-golden-horizon-stripe",
+    title: "Classic Golden Horizon Stripe",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-028",
+    price: 375,
+    currency: "ETB",
+    short_description: "Natural Cotton White with Golden Yellow stripes.",
+    description: "<p>Classic Golden Horizon Stripe</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Natural Cotton White</li><li>Stripe: Golden Yellow</li><li>Texture: soft, Medium-weight fabric, Soft yet durable</li><li>Best Use: traditional shawls, prayer cloths, table covers</li><li>Style: Bright, elegant, neat</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/0N15KtNk/image.png",
+    variants: [{ slug: "cgh-stripe", name: "Standard 1mx9m", price: 375, inventory: 150, hex: "#DAA520" }]
+  },
+  {
+    slug: "golden-sunrise-multistripe",
+    title: "Golden Sunrise Multistripe",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-029",
+    price: 1000,
+    currency: "ETB",
+    short_description: " kare 250* 4m=1000birr birr,Warm Yellow base with multi-colored accents.",
+    description: "<p>Golden Sunrise Multistripe</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Warm Yellow</li><li>Stripe: Light Blue, Brown, Mustard</li><li>Texture: Fine multicolor, Lightweight to medium-weight</li><li>Best Use: for scarves, shawls, wraps, table covers, or decorative textiles</li><li>Style: Bright, elegant, neat, Soft unfinished woven edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/W322Xhry/image.png",
+    variants: [{ slug: "gsm-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FFCC33" }]
+  },
+  {
+    slug: "vibrant-heritage-striped",
+    title: "Vibrant Heritage Striped",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-030",
+    price: 200,
+    currency: "ETB",
+    short_description: "Vibrant Red, Green, and Golden Yellow stripes.",
+    description: "<p>Vibrant Heritage Striped</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Vibrant Red, Deep Green, and Golden Yellow</li><li>Stripe: Multicolored stripes</li><li>Texture: Visible weave structure indicating traditional loom work</li><li>Best Use: shawl, table runner, or wall hanging</li><li>Style: Colorful, geometric rhythm, neat, Soft unfinished woven edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/gJNG5mH6/image.png",
+    variants: [{ slug: "vhs-standard", name: "Standard 1mx9m", price: 200, inventory: 150, hex: "#E31E24" }]
+  },
+  {
+    slug: "rainbow-hand-woven",
+    title: "Rainbow hand-woven",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-031",
+    price: 200,
+    currency: "ETB",
+    short_description: "kare 250* 0.80cm=200 birr,Multi-color geometric rhythm loom work.",
+    description: "<p>Rainbow hand-woven</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Vibrant Red, Deep Green, and Golden Yellow</li><li>Stripe: Soft Pink, Orange, and Clean White</li><li>Texture: Visible weave structure indicating traditional loom work</li><li>Best Use: shawl, blanket, or decorative throw</li><li>Style: Colorful, geometric rhythm, neat, Soft unfinished woven edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/hvYcDswR/image.png",
+    variants: [{ slug: "rhw-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FF69B4" }]
+  },
+  {
+    slug: "wolo-green-field",
+    title: "Wolo Green Field",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-032",
+    price: 775,
+    currency: "ETB",
+    short_description: "Deep Emerald Green with Red and Yellow accents.",
+    description: "<p>Wolo Green Field</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Deep Emerald Green</li><li>Stripe: Vibrant Red and Golden Yellow</li><li>Texture: Soft, Clear separation, Medium Weight</li><li>Best Use: shawl, table runner, or wall hanging</li><li>Style: Colorful, geometric rhythm, neat, Soft unfinished woven edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/FsfhWtdh/image.png",
+    variants: [{ slug: "wgf-standard", name: "Standard 1mx9m", price: 775, inventory: 150, hex: "#004B23" }]
+  },
+  {
+    slug: "addis-sunshine",
+    title: "Addis Sunshine",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-033",
+    price: 1250,
+    currency: "ETB",
+    short_description: "kare 250* 5m=1250birr,Bright Golden Yellow with traditional stripes.",
+    description: "<p>Addis Sunshine</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Bright Golden Yellow</li><li>Stripe: Deep Red and Vibrant Green</li><li>Texture: Soft, breathable, and lightweight</li><li>Best Use: church services</li><li>Style: Colorful, neat, Soft unfinished woven edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/JhQ8DMgd/image.png",
+    variants: [{ slug: "as-standard", name: "Standard 1mx9m", price: 1000, inventory: 150, hex: "#FFD700" }]
+  },
+  {
+    slug: "gray-tibeb",
+    title: "Gray Tibeb",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-034",
+    price: 1000,
+    currency: "ETB",
+    short_description: "kare 250* 4m=1000birr Soft Light Gray with Royal Blue and Yellow Tibeb.",
+    description: "<p>Gray Tibeb</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Soft Light Gray</li><li>Stripe: Royal Blue, Golden Yellow, and Black</li><li>Texture: Soft, breathable, and lightweight</li><li>Best Use: Shawl, scarf</li><li>Style: Colorful, neat, Soft unfinished woven edge</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/RhWxDf0L/image.png",
+    variants: [{ slug: "gt-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D3D3D3" }]
+  },
+  {
+    slug: "royal-tricolor",
+    title: "Royal Tricolor",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-035",
+    price: 1250,
+    currency: "ETB",
+    short_description: "kare 250* 5m=1250birr,Crisp White with Red, Yellow, and Green stripes.",
+    description: "<p>Royal Tricolor</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Vibrant Red, Golden Yellow, and Deep Green</li><li>Texture: Medium-weight fabric with a soft, breathable feel</li><li>Best Use: Shawl, scarf, Gabi</li><li>Style: Colorful, neat Edge, Soft unfinished tight weave</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/dQfYTWWN/image.png",
+    variants: [{ slug: "rt-standard", name: "Standard 1mx9m", price: 500, inventory: 150, hex: "#FFFFFF" }]
+  },
+  {
+    slug: "blue-nile-bundle",
+    title: "Blue Nile Bundle",
+    category: "woven-fabric",
+    subcategory: "drapes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-036",
+    price: 1800,
+    currency: "ETB",
+    short_description: "Indigo Blue and Earthy Brown natural weave.",
+    description: "<p>Blue Nile Bundle</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Indigo Blue, Earthy Brown, and Natural White</li><li>Stripe: Various colored stripes</li><li>Texture: Medium-weight, durable</li><li>Best Use: Shawl, scarf, Gabi</li><li>Style: Colorful, neat Edge, Soft unfinished tight weave</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/ZRqGW364/image.png",
+    variants: [{ slug: "bnb-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#0000FF" }]
+  },
+  {
+    slug: "jano-grid",
+    title: "Jano Grid",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-037",
+    price: 1875,
+    currency: "ETB",
+    short_description: "kare 250* 7.5m=1875 birr,Substantial-weight grid pattern for home decor.",
+    description: "<p>Jano Grid</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Golden Yellow, Earthy Brown, and Deep</li><li>Stripe: Various colored stripes</li><li>Texture: Substantial-weight, grid pattern</li><li>Best Use: Home decor</li><li>Style: Intricate weaving, with a structured geometric appearance</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/ZRqGW364/image.png",
+    variants: [{ slug: "jg-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#8B4513" }]
+  },
+  {
+    slug: "classic-blue",
+    title: "Classic Blue",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-038",
+    price: 2250,
+    currency: "ETB",
+    short_description: "Price= kare 250* 9m=2250birr,Natural Cotton White with Deep Indigo borders.",
+    description: "<p>Classic Blue</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Deep Blue (or Indigo)</li><li>Texture: Multipurpose soft, Lightweight and breathable</li><li>Best Use: Shawl, scarf, gabi</li><li>Style: Clean, fresh, and classic with a high-contrast border</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/C53XrQXh/image.png",
+    variants: [{ slug: "cb-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#00008B" }]
+  },
+  {
+    slug: "rift-valley",
+    title: "Rift Valley",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-039",
+    price: 2250,
+    currency: "ETB",
+    short_description: "kare 250* 9m=2250birr,Natural Earth Tone Tan with soft multi-stripes.",
+    description: "<p>Rift Valley</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Light Brown / Tan (Natural Earth Tone)</li><li>Stripe: Soft Pink, Light Blue, and White</li><li>Texture: Rusting cotton, medium weight, loose weave</li><li>Best Use: Light blanket, shawl, or wrap</li><li>Style: Clean, fresh, and classic with a high-contrast border</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/Qd3xH4Cr/image.png",
+    variants: [{ slug: "rv-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D2B48C" }]
+  },
+  {
+    slug: "tana-golden-blue",
+    title: "Tana Golden Blue",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-040",
+    price: 2250,
+    currency: "ETB",
+    short_description: "Price= kare 250* 9m=2250birr,Fine, lightweight Netela style with Golden Blue.",
+    description: "<p>Tana Golden Blue</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Royal Blue and Golden Yellow</li><li>Texture: Fine, Lightweight and breathable</li><li>Best Use: Netela, Gabi, shawl, or wrap</li><li>Style: Clean, fresh, and classic with a high-contrast border</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/7LBxtqVD/image.png",
+    variants: [{ slug: "tgb-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FFD700" }]
+  },
+  {
+    slug: "fikir-blue-line",
+    title: "Fikir Blue Line",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-041",
+    price: 2250,
+    currency: "ETB",
+    short_description: "Price= kare 250* 9m=2250birr,Clean, fresh Gabi with high-contrast Blue line.",
+    description: "<p>Fikir Blue Line</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Deep Blue (Indigo)</li><li>Texture: Lightweight and breathable</li><li>Best Use: Light blanket, shawl, Gabi, Netela</li><li>Style: Clean, fresh, and classic with a high-contrast border</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/wjgg614v/image.png",
+    variants: [{ slug: "fbl-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#F5F5F5" }]
+  },
+  {
+    slug: "dallol-vibrant-orange",
+    title: "Dallol Vibrant Orange",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-042",
+    price: 2250,
+    currency: "ETB",
+    short_description: "Price= kare 250* 9m=2250birr,Crisp White with Vibrant Orange contrast border.",
+    description: "<p>Dallol Vibrant Orange</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Vibrant Orange</li><li>Texture: Soft, breathable, lightweight</li><li>Best Use: Light blanket, shawl, or wrap</li><li>Style: Neat, Clean, fresh, and classic with a high-contrast border</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/LXYMyLhp/image.png",
+    variants: [{ slug: "dvo-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FF4500" }]
+  },
+  {
+    slug: "saba-pure-white",
+    title: "Saba Pure White",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-043",
+    price: 300,
+    currency: "ETB",
+    short_description: "kare 250* 1.20m=300 birr,Minimalist, airy, and breathable natural cotton.",
+    description: "<p>Saba Pure White</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Pure White / Natural Cotton</li><li>Stripe: Clean, bright, and minimalist</li><li>Texture: Soft, Lightweight, airy and breathable</li><li>Best Use: Netela, shawl, or wrap</li><li>Style: Clean, fresh, and classic with a high-contrast border</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/0yVRPcJW/image.png",
+    variants: [{ slug: "spw-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FFFFFF" }]
+  },
+  {
+    slug: "adey-bloom",
+    title: "Adey Bloom",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-044",
+    price: 300,
+    currency: "ETB",
+    short_description: "kare 250* 1.20m=300 birr,Vibrant Golden Yellow elegance for daily wear.",
+    description: "<p>Adey Bloom</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White</li><li>Stripe: Vibrant Golden Yellow</li><li>Texture: Soft, Lightweight, airy and breathable</li><li>Best Use: Netela, shawl, or wrap</li><li>Style: Clean, fresh, and elegance and suitable for daily wear</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/j5JG6T3c/image.png",
+    variants: [{ slug: "ab-standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#FFD700" }]
+  },
+  {
+    slug: "abyssinian-rose",
+    title: "Abyssinian Rose",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-045",
+    price: 325,
+    currency: "ETB",
+    short_description: "kare 250* 1.30m=325birr.",
+    description: "<p>Abyssinian Rose</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Soft Beige / Light Cream</li><li>Stripe: Delicate Pastel Pink</li><li>Texture: Lightweight and breathable</li><li>Best Use: Scarf or shawl, Home décor</li><li>Style: Casual elegance and suitable for daily wear</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/BbTkyg0k/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "green-lion-heritage",
+    title: "Green Lion Heritage",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-046",
+    price: 500,
+    currency: "ETB",
+    short_description: "kare 250* 2m=500birr",
+    description: "<p>Green Lion Heritage</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Vibrant Red and Deep Green</li><li>Texture: Lightweight and breathable soft to touch</li><li>Best Use: Scarf, Netela shawl, Home décor</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/3rXq3nsy/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "wello-sunset",
+    title: "Wello Sunset",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-047",
+    price: 550,
+    currency: "ETB",
+    short_description: "kare 250* 2.20m=550birr",
+    description: "<p>Wello Sunset</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Vibrant Orange</li><li>Texture: Soft, breathable, and lightweight, smooth</li><li>Best Use: Scarf, Netela shawl, Home décor</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/0QgtswZ4/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "arisi-highland-green",
+    title: "Arisi Highland Green",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-048",
+    price: 450,
+    currency: "ETB",
+    short_description: "kare 250* 1.80m=450birr",
+    description: "<p>Arisi Highland Green</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Pure White / Natural Cotton</li><li>Stripe: Deep Green and Royal Blue</li><li>Texture: Soft, Even weave, Breathable fabric</li><li>Best Use: Scarf, Netela shawl, Home décor</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/Fsg1g52D/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "enku-yellow",
+    title: "Enku Yellow",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-049",
+    price: 300,
+    currency: "ETB",
+    short_description: "kare 250* 1.20m=300birr",
+    description: "<p>Enku Yellow</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Vibrant Yellow</li><li>Texture: Soft, Even weave, Breathable fabric</li><li>Best Use: Scarf, Netela shawl, Home décor</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/Y2QSMBqM/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "axum-royal-blue",
+    title: "Axum Royal Blue",
+    category: "woven-fabric",
+    subcategory: "clothes",
+    brand: "Hulegeb",
+    sku: "HLG-FAB-050",
+    price: 625,
+    currency: "ETB",
+    short_description: "kare 250* 2.50m=625 birr.",
+    description: "<p>Axum Royal Blue</p><ul><li>Fabric Type: Hand woven cotton thread</li><li>Color: Pure White / Natural Cotton</li><li>Stripe: Royal Blue</li><li>Texture: Hand-woven, Breathable weave, Smooth finish</li><li>Best Use: Scarf, Netela shawl, Home décor</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/L5VRfRnZ/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "highland-mist",
+    title: "Highland Mist",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-051",
+    price: 1625,
+    currency: "ETB",
+    short_description: " kare 250* 6.5m=1625birr,Thicker, blanket-like cloth for bedding and curtains.",
+    description: "<p>Highland Mist</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Soft Heathered Gray / Charcoal</li><li>Stripe: Whites breaking through the gray</li><li>Texture: Thicker, blanket-like cloth, Soft yet dense</li><li>Best Use: Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/8PPg327H/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "buna-earth-brown",
+    title: "Buna Earth Brown",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-052",
+    price: 1250,
+    currency: "ETB",
+    short_description: "kare 250* 5m=1250 birr,Rich Earthy Brown medium-weight sturdy fabric.",
+    description: "<p>Buna Earth Brown</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Rich Earthy Brown / Tan</li><li>Stripe: Light Natural Stripes (Beige/White)</li><li>Texture: Medium-weight fabric with a sturdy, tactile feel</li><li>Best Use: Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/Rhgy40WW/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "golden-morning",
+    title: "Golden Morning",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-053",
+    price: 1750,
+    currency: "ETB",
+    short_description: "kare 250* 7m=1750 birrSoft butter yellow with a fresh smooth finish.",
+    description: "<p>Golden Morning</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Pale Yellow / Soft Butter</li><li>Stripe: Brighter Yellow and Clean White</li><li>Texture: Smooth surface, Natural drape, Fresh finish</li><li>Best Use: Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/3rtcydwB/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "buna-indigo",
+    title: "Buna Indigo",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-054",
+    price: 1800,
+    currency: "ETB",
+    short_description: "Deep Indigo Blue and Earthy Brown loom-finished fabric.",
+    description: "<p>Buna</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Deep Indigo Blue and Earthy Brown</li><li>Texture: Light to medium weight, Loom-finished</li><li>Best Use: Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/qRk1qTV5/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "desta-stripe",
+    title: "Desta Stripe",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-055",
+    price: 1800,
+    currency: "ETB",
+    short_description: "Vibrant Yellow and Red multicolored heritage stripes.",
+    description: "<p>Desta Stripe</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Vibrant Yellow and Red</li><li>Stripe: Multicolored stripes including Green</li><li>Texture: Visible weave, Soft yet sturdy, Natural finish</li><li>Best Use: Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/65DzRRxR/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "harar-earth",
+    title: "Harar Earth",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-056",
+    price: 1800,
+    currency: "ETB",
+    short_description: "Soft and breathable fabric with tactile depth.",
+    description: "<p>Harar Earth</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Earthy Brown and Natural White</li><li>Stripe: Multicolored stripes including Green</li><li>Texture: Soft and breathable, slight relief</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/LsSTQpXd/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "tizita-soft-stripe",
+    title: "Tizita Soft Stripe",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-057",
+    price: 1800,
+    currency: "ETB",
+    short_description: "Monochromatic soft yellow stripe with a soft drape.",
+    description: "<p>Tizita Soft Stripe</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Light Beige / Pale Yellow</li><li>Stripe: Soft Yellow</li><li>Texture: Smooth finish, Natural feel, Soft drape</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/3NkC0rL0/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "vertical-mist",
+    title: "Vertical Mist",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-058",
+    price: 1100,
+    currency: "ETB",
+    short_description: "kare 250* 4.4m=1100birr,Lightweight even-weave fabric with vertical lines.",
+    description: "<p>Vertical Mist</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Natural White / Light Beige</li><li>Stripe: Darker lines creating the stripe effect</li><li>Texture: Even weave, Lightweight and breathable</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/MGtysfNs/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "golden-mountain",
+    title: "Golden Mountain",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-059",
+    price: 1625,
+    currency: "ETB",
+    short_description: "kare 250* 6.5m=1625birr, Sturdy warm yellow fabric with tan and white accents.",
+    description: "<p>Golden Mountain</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Warm Yellow / Gold</li><li>Stripe: Light Brown (Tan) and White</li><li>Texture: Medium-weight, Sturdy, Flexible drape</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/cJ1D4WNr/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "stone-plain",
+    title: "Stone Plain",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-060",
+    price: 1375,
+    currency: "ETB",
+    short_description: "kare 250* 5.5m=1375birr,Organic earthy tan with a tight smooth weave.",
+    description: "<p>Stone Plain</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Light Brown / Warm Tan</li><li>Visual tone: Earthy, neutral, and organic</li><li>Texture: Tighter, smoother weave, Soft and supple</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/vBc3fvTV/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "gamo-fine-grid",
+    title: "Gamo Fine Grid",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-061",
+    price: 1875,
+    currency: "ETB",
+    short_description: " kare 250* 7.5m=1875birr,Clean, airy minimalist cream fabric.",
+    description: "<p>Gamo Fine Grid</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Soft Natural White / Pale Cream</li><li>Visual tone: Clean, airy, and fresh</li><li>Texture: Lighter weight, Soft and breathable</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/pT4kZn53/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "blue-nile-stripe-textile",
+    title: "Blue Nile Stripe",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-062",
+    price: 2250,
+    currency: "ETB",
+    short_description: "kare 250* 9m=2250birr,Royal Blue and Golden Yellow natural finish textile.",
+    description: "<p>Blue Nile Stripe</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Crisp White / Natural Cotton</li><li>Stripe: Royal Blue and Golden Yellow</li><li>Texture: Soft and breathable, Natural finish</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/1t6V5TRb/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "yellow-thorn",
+    title: "Yellow Thorn",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-063",
+    price: 1500,
+    currency: "ETB",
+    short_description: " kare 250* 6m=1500birr,Fringe detail lightweight textile with royal blue accents.",
+    description: "<p>Yellow Thorn</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Crisp White / Natural Cotton</li><li>Accent colors: Royal Blue and Golden Yellow</li><li>Texture: Lightweight and breathable, Natural finish</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/HW86L3FR/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "sunshine-yellow",
+    title: "Sunshine Yellow",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-064",
+    price: 2000,
+    currency: "ETB",
+    short_description: " kare 250* 8m=2000birr,Bright and cheerful broad horizontal stripes.",
+    description: "<p>Sunshine Yellow</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: Vibrant Yellow and Crisp White</li><li>Visual Tone: Sunny, bright, and cheerful</li><li>Texture: Breathable weave, Soft</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/HW86L3FR/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+  },
+  {
+    slug: "white-harvest",
+    title: "White Harvest",
+    category: "woven-fabric",
+    subcategory: "bedding",
+    brand: "Hulegeb",
+    sku: "HLG-BDC-065",
+    price: 2500,
+    currency: "ETB",
+    short_description: "kare 250* 10m=2500 birr,Substantial grid weave for durable home decor.",
+    description: "<p>White Harvest</p><ul><li>Fabric Type: Hand woven Cotton Fabric</li><li>Color: White, blue and red</li><li>Visual Tone: Warm, organic, and rustic</li><li>Texture: Medium-weight, grid weave, substantial, durable</li><li>Best Use: Home décor, Bedding and curtain</li><li>Dimension: </li></ul>",
+    inventory: 150,
+    attributes: { size: "1m x 9m", material: "handwoven cotton" },
+    image: "https://i.postimg.cc/8PhwRcpY/image.png",
+    variants: [{ slug: "standard", name: "Standard 1mx9m", price: 1800, inventory: 150, hex: "#D8C9B3" }]
+   }
+];
+
+// === HELPERS (unchanged) ===
+const IMPACT_DATA = {
+  jobsCreated: { value: 525, label: "Jobs Created", target: 600 },
+  hoursTraining: { value:18480, label: "Training Hours", target: 19000 },
+  productsSold: { value: 695905, label: "Products Sold", target: 800000 },
+  communitiesServed: { value: 15, label: "Communities", target: 19 }
+};
+
+const ARTISAN_PROFILE = {
+  name: "Desta Bekele",
+  role: "Master Carpet Weaver",
+  yearsExperience: 8,
+  productsCreated: 156,
+  story: "Desta lost his sight at age 12 but discovered weaving at the Hulegeb training center. Today, he leads our carpet workshop and has trained 23 new artisans. His intricate geometric patterns have become signature designs that customers request by name."
+};
+
+function formatPrice(price, currency = 'ETB') {
+  if (price === 0) return 'Request a Quote';
+  return `${price.toLocaleString()} ${currency}`;
+}
+
+function getProductBySlug(slug) {
+  return PRODUCTS.find(p => p.slug === slug);
+}
+
+function getVariantBySlug(product, variantSlug) {
+  return product.variants.find(v => v.slug === variantSlug);
+}
+
+function getProductImage(slug) {
+  const product = PRODUCTS.find(p => p.slug === slug);
+  if (!product) return "";
+  if (product.image) return product.image;
+  if (product.images && product.images.length > 0) return product.images[0];
+  return "";
+}
+
+window.PRODUCTS = PRODUCTS;
+window.IMPACT_DATA = IMPACT_DATA;
+window.ARTISAN_PROFILE = ARTISAN_PROFILE;
+window.formatPrice = formatPrice;
+window.getProductBySlug = getProductBySlug;
+window.getVariantBySlug = getVariantBySlug;
+window.getProductImage = getProductImage;
+// === END CLEAN INLINE PRODUCTS ===
+</script>
+  <script src="{% static 'js/impact-counters.js' %}"></script>
+  <script src="{% static 'js/artisan-modal.js' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('products-grid');
+    const priceRange = document.getElementById('hgPriceRange');
+    const priceLabel = document.getElementById('hgPriceLabel');
+    const filterBtns = document.querySelectorAll('.hg-filter-btn');
+    const dropdownTriggers = document.querySelectorAll('.hg-dropdown-trigger');
+
+    if (!grid || !window.PRODUCTS) return;
+
+    let state = { category: 'all', subcategory: 'all', maxPrice: 15000 };
+
+    // --- 1. THE DROPDOWN BYPASS ENGINE ---
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation(); // Stops other scripts from interfering
+            const menu = trigger.nextElementSibling;
+            
+            // Close any open menus first
+            document.querySelectorAll('.hg-dropdown-animate').forEach(m => {
+                if (m !== menu) m.classList.remove('show');
+            });
+            
+            // Toggle the clicked menu
+            menu.classList.toggle('show');
+        });
+    });
+
+    // Close menu when clicking anywhere else on the screen
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.hg-dropdown-animate').forEach(m => m.classList.remove('show'));
+    });
+    // -------------------------------------
+
+    // --- 2. THE FILTER ENGINE ---
+   function renderProducts() {
+        grid.innerHTML = '';
+        const filtered = window.PRODUCTS.filter(p => {
+            const catMatch = state.category === 'all' || p.category === state.category;
+            const subMatch = state.subcategory === 'all' || p.subcategory === state.subcategory;
+            const price = p.price || (p.variants && p.variants[0]?.price) || 0;
+            return catMatch && subMatch && price <= state.maxPrice;
+        });
+
+        filtered.forEach((product, index) => {
+            const card = document.createElement('a');
+            // Use the Django URL tag for the base path, then add the slug
+            card.href = "{% url 'products' %}?slug=" + product.slug;
+            card.className = 'product-card animate-fade-up';
+            card.style.animationDelay = `${0.05 * (index % 12)}s`;  
+            
+            const displayPrice = product.price || product.variants?.[0]?.price || 0;
+            
+            // This is the part I brought back: Category Label + Description
+            card.innerHTML = `
+                <div class="product-image">
+                    <img src="${window.getProductImage(product.slug)}" alt="${product.title}" loading="lazy">
+                    ${product.compare_at_price > displayPrice ? '<span class="product-badge">Sale</span>' : ''}
+                </div>
+                <div class="product-info">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <h3 class="product-title m-0">${product.title}</h3>
+                        <span style="font-size: 10px; font-weight: 700; color: #f37a20; text-transform: uppercase; letter-spacing: 0.5px;">
+                            ${product.category || ''}
+                        </span>
+                    </div>
+                    <p class="product-description text-truncate" style="font-size: 13px; color: #666; margin-bottom: 10px;">
+                        ${product.short_description || ''}
+                    </p>
+                    <div class="product-price">
+                        <span class="current" style="font-weight: 700; color: #222;">
+                            ${window.formatPrice(displayPrice)}
+                        </span>
+                    </div>
+                </div>`;
+            grid.appendChild(card);
+        });
+    }
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Clear active states from ALL buttons and triggers
+            document.querySelectorAll('.hg-filter-btn').forEach(b => {
+                b.classList.remove('active', 'btn-dark');
+                if(!b.classList.contains('dropdown-item')) b.classList.add('btn-outline-dark');
+            });
+            document.querySelectorAll('.hg-dropdown-trigger').forEach(t => {
+                t.classList.remove('active', 'btn-dark');
+                t.classList.add('btn-outline-dark');
+            });
+            
+            // Set state
+            state.category = btn.getAttribute('data-cat');
+            state.subcategory = btn.getAttribute('data-sub') || 'all';
+
+            // Highlight Logic
+            if (btn.classList.contains('dropdown-item')) {
+                const parentBtn = btn.closest('.dropdown').querySelector('.hg-dropdown-trigger');
+                parentBtn.classList.remove('btn-outline-dark');
+                parentBtn.classList.add('active', 'btn-dark');
+            } else {
+                btn.classList.remove('btn-outline-dark');
+                btn.classList.add('active', 'btn-dark');
+            }
+            
+            renderProducts();
+        });
+    });
+
+    priceRange.addEventListener('input', (e) => {
+        state.maxPrice = parseInt(e.target.value);
+        priceLabel.innerText = `${state.maxPrice.toLocaleString()} ETB`;
+        renderProducts();
+    });
+
+    renderProducts();
+});
+</script>
+    <!-- Jquery Library File -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <!-- Bootstrap js file -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Validator js file -->
+    <script src="{% static 'js/validator.min.js' %}"></script>
+    <!-- SlickNav js file -->
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <!-- Swiper js file -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <!-- Counter js file -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <!-- Isotop js file -->
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+    <!-- Magnific js file -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- SmoothScroll -->
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
+    <!-- Parallax js -->
+    <script src="{% static 'js/parallaxie.js' %}"></script>
+    <!-- MagicCursor js file -->
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/magiccursor.js' %}"></script>
+    <!-- Text Effect js file -->
+    <script src="{% static 'js/SplitText.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <!-- YTPlayer js File -->
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+    <!-- Wow js file -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Main Custom js file -->
+    <script src="{% static 'js/function.js' %}"></script>
+</body>
+</html>

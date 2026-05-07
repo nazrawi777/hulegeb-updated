@@ -1,0 +1,149 @@
+{
+  "organization": {
+    "name": "Hulegeb Training and Rehabilitation for Blind and Disabled Society Association",
+    "shortName": "Hulegeb",
+    "tagline": "Empowering Vision, Building Futures",
+    "description": "Transforming lives through dignity, skills, and opportunity for Ethiopia's blind and disabled community since 1952."
+  },
+  "stats": [
+    {
+      "value": 85,
+      "suffix": "+",
+      "label": "Dedicated Employees",
+      "description": "Committed team members serving our mission"
+    },
+    {
+      "value": 60,
+      "suffix": "+",
+      "label": "Years of Service",
+      "description": "Decades of empowering lives"
+    },
+    {
+      "value": 28287,
+      "suffix": "",
+      "label": "Sq Meters of Land",
+      "description": "Our foundational endowment"
+    },
+    {
+      "value": 50,
+      "suffix": "%",
+      "label": "Gender Balance",
+      "description": "Nearly equal representation"
+    }
+  ],
+  "mission": {
+    "title": "Our Mission",
+    "content": "The Hulegeb Training and Rehabilitation for Blind and Disabled Society Association is dedicated to promoting the socio-economic empowerment, dignity, and full inclusion of individuals with visual and physical disabilities in Ethiopia. We envision a society where persons with disabilities are not dependent, but are empowered, productive leaders. We break down barriers to create a culture of equal opportunity, unlocking their potential to shape a stronger community and nation."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "content": "To be the leading catalyst for an inclusive Ethiopia where every blind and physically disabled individual attains self-reliance, actively participates in the socio-economic fabric, and is recognized for their inherent dignity and contribution."
+  },
+  "coreValues": [
+    {
+      "title": "Inclusion",
+      "description": "We believe in a society where disability is not a barrier to participation",
+      "icon": "users"
+    },
+    {
+      "title": "Dignity",
+      "description": "We uphold the inherent worth of every individual, fostering respect and self-worth through productive work",
+      "icon": "heart"
+    },
+    {
+      "title": "Sustainability",
+      "description": "We build resilient systems—financial, operational, and environmental—to ensure lasting impact",
+      "icon": "leaf"
+    },
+    {
+      "title": "Empowerment",
+      "description": "We equip individuals with skills, opportunity, and advocacy to control their own destinies",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Integrity",
+      "description": "We operate with transparency, accountability, and ethical stewardship in all our actions",
+      "icon": "shield"
+    }
+  ],
+  "objectives": {
+    "general": "To foster the lasting socio-economic empowerment and full social inclusion of blind and physically disabled individuals in Ethiopia, enabling a transition from marginalization to dignified self-reliance and active community contribution.",
+    "specific": [
+      "Provide market-driven vocational training in viable trades (weaving, carpet making, artisan crafts)",
+      "Generate sustainable, dignified long-term employment within Productsion units",
+      "Advocate for the rights and capabilities of persons with disabilities to dismantle societal barriers",
+      "Strengthen institutional resilience through diversified income sources and strategic asset development"
+    ]
+  },
+  "history": {
+    "title": "Our Journey Through Time",
+    "subtitle": "Six decades of resilience, adaptation, and unwavering commitment",
+    "events": [
+      {
+        "period": "1950-1960",
+        "title": "The Founding Era",
+        "subtitle": "A Royal Endowment and a Vision Takes Root",
+        "content": "The association's genesis dates to 1952, emerging from a pioneering national commitment to address the marginalization of persons with disabilities. Its establishment was catalyzed by a transformative act of philanthropy: a grant of 28,287 square meters of prime land in Addis Ababa from His Imperial Majesty Emperor Haile Selassie I. This endowment was explicitly dedicated to the welfare, training, and advancement of the blind and physically disabled, providing not just a physical space but a symbolic foundation for dignity through work."
+      },
+      {
+        "period": "1960-1970",
+        "title": "National Stewardship",
+        "subtitle": "Building Foundations and Assuming Leadership",
+        "content": "This decade marked a critical transition from foundational setup to operational expansion and national ownership. A landmark shift occurred in 1966, when management of key disability institutions—originally established by international missionary organizations—was formally transferred to the Ethiopian Blind People's Association. These included the Bako School for the Blind, the Wolayta Sodo Education Home, and the Debre Dewa Production Center."
+      },
+      {
+        "period": "1970-1980",
+        "title": "Expansion Era",
+        "subtitle": "Institutionalization Under a New Political Order",
+        "content": "Despite the complex environment following the 1974 political shift, the association demonstrated remarkable institutional resilience. It continued to expand its vocational training infrastructure, with production centers across multiple regions specializing in marketable crafts such as hand-woven wool and cotton carpets, textiles, and plastic brush production."
+      },
+      {
+        "period": "1980-1990",
+        "title": "Strategic Consolidation",
+        "subtitle": "Challenges, Adaptation, and Resilience",
+        "content": "The late 1980s presented profound challenges characterized by political instability and civil conflict. Faced with resource constraints, the association entered a phase of strategic consolidation—focusing on preserving core operations, safeguarding its workforce, and adapting its model to ensure survival."
+      },
+      {
+        "period": "1990-2000",
+        "title": "Legal Reformation",
+        "subtitle": "Rebirth for a New Millennium",
+        "content": "On July 28, 2000, the association was officially re-registered under the Civil Society Organization Authority as 'Hulegeb Training and Rehabilitation for Blind and Disabled Society Association.' This represented a strategic rebirth with modern governance structure and clarified legal standing."
+      },
+      {
+        "period": "2000-2010",
+        "title": "Governance Strengthening",
+        "subtitle": "Consolidation and Pursuit of Sustainability",
+        "content": "A formal, seven-member elected Executive Committee was instituted to provide robust strategic oversight. Operational efforts centered on streamlining core vocational training programs and pursuing diversified income streams for organizational sustainability."
+      },
+      {
+        "period": "2010-Present",
+        "title": "Strategic Growth",
+        "subtitle": "Future-Focused Development",
+        "content": "Hulegeb now operates as a matured, strategically oriented institution with 85 dedicated employees maintaining nearly perfect gender balance. The central strategic undertaking is the ambitious development of modern, multipurpose facilities—a definitive move to ensure vital services are insulated from external volatilities."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join Our Mission",
+    "subtitle": "Together, we can build a more inclusive Ethiopia",
+    "donateButton": "Support Our Work",
+    "volunteerButton": "Become a Volunteer"
+  },
+  "footer": {
+    "email": "info@hulegeb.org",
+    "phone": "+251 11 XXX XXXX",
+    "address": "Addis Ababa, Ethiopia",
+    "social": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#"
+    },
+    "copyright": "© 2024 Hulegeb Association. All rights reserved."
+  },
+  "seo": {
+    "title": "About Us | Hulegeb - Empowering Ethiopia's Blind & Disabled Community",
+    "description": "Learn about Hulegeb's 60+ year mission to empower blind and physically disabled individuals in Ethiopia through vocational training, employment, and advocacy.",
+    "keywords": "Hulegeb, Ethiopia, disability rights, blind, vocational training, NGO, charity, empowerment, inclusion"
+  }
+}

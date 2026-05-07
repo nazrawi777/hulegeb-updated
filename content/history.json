@@ -1,0 +1,154 @@
+{
+  "organizational_profile": {
+    "historical_service": "Our journey defines our track record:\n\n- **1950s-60s**: Foundation and establishment of initial rehabilitation service\n- **1966**: Assumed national stewardship of key institutions (Bako School, Welayta Sodo Home) from international partners\n- **1970s-80s**: Expanded regional production room centers, providing nationwide vocational training\n- **2000**: Successfully re-registered under new legal frameworks, demonstrating adaptability\n- **2000-Present**: Consolidated operations, professionalized governance, and launched sustainability initiatives",
+    "historical_timeline": [
+      {
+        "period": "1950s-60s",
+        "title": "Foundation Era",
+        "description": "Foundation and establishment of initial rehabilitation service"
+      },
+      {
+        "period": "1966",
+        "title": "National Stewardship",
+        "description": "Assumed national stewardship of key institutions (Bako School, Welayta Sodo Home) from international partners"
+      },
+      {
+        "period": "1970s-80s",
+        "title": "Nationwide Expansion",
+        "description": "Expanded regional production room centers, providing nationwide vocational training"
+      },
+      {
+        "period": "2000",
+        "title": "Legal Re-registration",
+        "description": "Successfully re-registered under new legal frameworks, demonstrating adaptability"
+      },
+      {
+        "period": "2000-Present",
+        "title": "Modern Era",
+        "description": "Consolidated operations, professionalized governance, and launched sustainability initiatives"
+      }
+    ],
+    "partners": [
+      "Christian Blind Mission (CBM)",
+      "Sudan Interior Mission (SIM)",
+      "Various Italian Catholic Missions",
+      "Government Social Affairs Offices",
+      "Local businesses and civil society organizations",
+      "International development agencies focused on inclusive economic growth"
+    ],
+    "partners_description": "Historically, we have collaborated with international organizations such as the Christian Blind Mission (CBM), the Sudan Interior Mission (SIM), and various Italian Catholic Missions. Today, we seek partnerships with government bodies (Social Affairs Offices), local business, civil society organizations, and international development agencies focused on inclusive economic growth.",
+    "legal_and_regulatory": "The association is fully compliant with Ethiopian law. It was formally re-registered on <time datetime=\"2000-07-28\">July 28, 2000</time>, under the Civil Society Organization Authority, in accordance with the Ethiopian Civil Code No. 404 and Associations Registration Regulation No. 321/1959. Our operations and governance are regularly reviewed to maintain this standing.",
+    "registration_date": "2000-07-28",
+    "impact_metrics": {
+      "years_of_service": 70,
+      "land_sqm": 28278,
+      "employees_supported": 85
+    },
+    "impact_descriptions": {
+      "years_of_service": "Years of uninterrupted service to Ethiopia's disabled community",
+      "land_sqm": "Square meters of land successfully secured and preserved for its intended social purpose across generations",
+      "employees_supported": "Individuals provided with stable employment and dignity"
+    },
+    "governance_bios": {
+      "executive_committee": "Composed of seven elected professionals committed to disability inclusion, providing strategic guidance and oversight.",
+      "management_team": "Led by a General Manager with extensive experience in non-profit management and vocational training, supported by department heads skilled in production, training, and administration."
+    },
+    "community_engagement": "We engage deeply with our primary stakeholders, persons with disabilities, by involving them directly in program design and as the majority of our workforce. We collaborate with local communities, government social affairs bureaus, and other disability associations to advocate for inclusive policies and raise awareness, ensuring our work is community-embedded and responsive.",
+    "future_direction": "Our primary strategic direction is the development of our endowed land. With secured permits, we plan to construct modern facilities for expanded production workshops, training centers, administrative offices, and retail shops. This project aims to create a self-sustaining ecosystem that guarantees our financial independence, scales our impact, and secures a permanent hub for disability empowerment for future generations.",
+    "environment_responsibility": {
+      "intro": "We recognize that protecting the environment is essential to sustainable development. Hulegeb is committed to reducing our ecological footprint through conscious material choice, waste reduction, and responsible production.",
+      "practices": [
+        {
+          "title": "Natural & Local Materials",
+          "description": "We prioritize sustainably sourced, natural materials such as sheep wool, cotton, and locally harvested wood, minimizing synthetic inputs and reducing carbon emissions from transportation."
+        },
+        {
+          "title": "Low Waste Production",
+          "description": "From fabric scraps to wood off-cuts, we repurpose leftover materials into smaller products like doormats, brushes, or stuffing, ensuring minimal waste in our manufacturing process."
+        },
+        {
+          "title": "Eco-Friendly Practice",
+          "description": "Our natural dyes, traditional hand weaving techniques, and non-toxic finishes ensure that Productsion processes are safe for both our artisans and the environment."
+        },
+        {
+          "title": "Long-Lasting Production",
+          "description": "We craft durable, high-quality goods designed to withstand years of use—encouraging conscious consumption and reducing the cycle of waste."
+        },
+        {
+          "title": "Land Stewardship",
+          "description": "Our endowed land in Addis Ababa is not only a hub for training and production but also a responsibly managed asset. Future development plans include eco-conscious building designs and green spaces that respect the local ecosystem."
+        }
+      ]
+    },
+    "social_responsibility": {
+      "intro": "At Hulegeb social responsibility is the foundation of who we are. We are not just an organization serving the blind and physically disabled—we are a community created, led, and sustained by them. Over 80% of our workforce and leadership are persons with disabilities, ensuring every decision and action is rooted in lived experience, respect, and true representation.",
+      "pillars": [
+        {
+          "title": "Inclusive Employment and Leadership",
+          "description": "We go beyond offering jobs—we build careers, cultivate leaders, and empower our team to shape the organization from within."
+        },
+        {
+          "title": "Dignity through Skills",
+          "description": "Our hands-on vocational training in weaving, carpentry, brush-making and other trades is designed to transition individuals from marginalization to economic independence and self-reliance."
+        },
+        {
+          "title": "Advocacy and Awareness",
+          "description": "We actively partner with government bodies, community groups, and media to advance disability rights, disrupt stereotypes, and influence inclusive policies at all levels."
+        },
+        {
+          "title": "Gender Equality",
+          "description": "We maintain a near-equal gender balance across all roles, ensuring women with disabilities are prominently represented as artisans, managers, and decision-makers."
+        },
+        {
+          "title": "Community-centered Design",
+          "description": "Everything we do—from product creation to program development—is shaped in direct dialogue with the disability community, guaranteeing relevance, authenticity, and lasting impact."
+        }
+      ]
+    },
+    "economic_responsibility": "At Hulegeb, economic responsibility means creating systems that empower, sustain, and include. We move beyond aid to build a self-reliant ecosystem where persons with disabilities are not beneficiaries but producers, earners and leaders.\n\nOur model integrates vocational training with immediate income-generating work ensuring skills translate directly into livelihoods. We maintain stability through diversified streams—product sales, workshop training, land-based revenue, and strategic partnerships. By developing our endowed land for long-term community wealth, we invest in sustainable growth that benefits generations.\n\nWe prioritize local sourcing and employ artisans with disabilities across production, packaging, and sales—keeping opportunity within the community. All resources are managed with transparency and accountability under elected governance, ensuring every investment advances our mission.\n\nHulegeb stands as a custodian of trust, a catalyst for inclusion, and a blueprint for disability-led development—proving that true economic power lies in empowerment not dependence.",
+    "production_method": {
+      "intro": "We believe production should empower—not exploit. That's why our workshops are designed as spaces for learning, creativity, and purpose.",
+      "methods": [
+        {
+          "title": "Inclusive Employment and Training Integration",
+          "description": "The majority of Productsion team is composed of blind and physically disabled artisans. We operate on an apprentice-to-artisan model, where vocational training and paid work happen side by side. Trainees learn by doing whether weaving carpets, crafting furniture, or assembling brushes—under the guidance of experienced mentors."
+        },
+        {
+          "title": "Blend of Traditional and Adaptive Techniques",
+          "description": "We honor Ethiopian weaving and woodworking traditions while incorporating adaptive tools and techniques that enable artisans with varying abilities to participate fully. Looms, brushes, and workstations are often customized to ensure accessibility and comfort."
+        },
+        {
+          "title": "Sustainable and Local Sourcing",
+          "description": "We prioritize natural, locally sourced materials—such as sheep wool, cotton, and responsibly harvested wood—reducing environmental impact and supporting the regional economy."
+        },
+        {
+          "title": "Small-Batch, Quality-focused Production",
+          "description": "Our items are crafted in small batches with attention to detail, durability, and aesthetic value. This allows for consistent quality controls and ensures each product meets both functional and market standards."
+        },
+        {
+          "title": "Integrated Social Enterprise Model",
+          "description": "Production is not isolated from our mission: it fuels it. Revenues from product sales directly fund training programs, fair wages, and facility improvements, creating a self-reinforcing cycle of empowerment."
+        }
+      ]
+    },
+    "recognitions": [
+      {
+        "type": "Government and Regulatory Validation",
+        "description": "Our association operates in full compliance with Ethiopian law and has been formally recognized by relevant authorities. Our most significant legal validation is our official re-registration certificate issued by the Civil Society Organization Authority on July 28, 2000, under Ethiopian Civil Code and Associations Registration Regulation."
+      },
+      {
+        "type": "International and Partnership Recognitions",
+        "partners": [
+          "Christian Blind Mission (CBM)",
+          "Sudan Interior Mission (SIM)",
+          "Various Italian Catholic Missions and NGOs"
+        ]
+      },
+      {
+        "type": "Awards for Social Impact and Innovation",
+        "description": "Specific awards can be listed here as received."
+      }
+    ],
+    "key_achievement_highlight": "Successful navigation of multiple political transitions while safeguarding core mission and assets."
+  }
+}

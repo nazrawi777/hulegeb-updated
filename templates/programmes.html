@@ -1,0 +1,493 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Awaiken">
+	<!-- Page Title -->
+    <title>Our Programs & Initiatives | Hulegeb Training & Rehab</title>
+    <meta name="description" content="Explore Hulegeb's specialized programs designed for vocational skill-building, social integration, and long-term rehabilitation success.">
+    <link rel="canonical" href="https://www.hulegebberhan.org/programmes/">
+	<!-- Favicon Icon -->
+		<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+	<!-- Font Awesome Icon Css-->
+	<link href="{% static 'css/all.min.css' %}" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="{% static 'css/mousecursor.css' %}">
+	<!-- Main Custom Css -->
+	<link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
+	<style>
+	     .main-menu ul li a{
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.4em;
+	padding: 14px 20px !important;
+	color: #000 !important;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+	
+}
+ .phone-icon {
+    width: 34px; /* Change to your icon's actual width */
+    height: 34px; /* Change to your icon's actual height */
+    background-color: #000; /* Your desired color */
+    
+    /* Ensure the mask fits */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+ .main-menu ul li a i{
+
+	color: #f37a20 !important;
+
+	
+}
+	</style>
+</head>
+<body>
+
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+						<div id="loading-icon"><img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="{% url 'index' %}">
+						<img src="https://i.postimg.cc/3w3nVg4V/Hulegeb_Training_Rehabilitation_Logo_1_white.png" alt="Logo">
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
+                                <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ourhistory' %}">Our Legacy</a></li>
+                                       
+                                    </ul>
+                                </li>                              
+                                
+                                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                                <li>
+    <a href="{% url 'store' %}">Products</a>
+</li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#" id="abthead">Pages</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Our Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'programmes' %}" id="abthead">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'video_gallery' %}">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}">Donation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> 
+                                <li>
+    <a href="{% url 'admin:index' %}">
+        <i class="fa-solid fa-user"></i>
+    </a>
+</li>                        
+                            </ul>
+                        </div>
+                        <!-- Contact Now Box Start -->
+                        <div class="contact-now-box">
+                            <div class="icon-box">
+    <div class="phone-icon" style="-webkit-mask-image: url('{% static 'images/icon-phone.svg' %}'); mask-image: url('{% static 'images/icon-phone.svg' %}');"></div>
+    </div>
+                            <div class="contact-now-box-content">
+                                <p>need help !</p>
+                                <h3><a href="tel:+251-11-3-72-66-47">+251-11-3-72-66-47</a></h3>                                
+                            </div>
+                        </div>
+                        <!-- Contact Now Box End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+    <!-- Page Header Start -->
+    <div class="page-header parallaxie">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-2" data-cursor="-opaque"><span>Our</span> Programmes</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'index' %}">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Programmes</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Page Programs Start -->
+    <div class="page-programs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://i.postimg.cc/VvQRbrh9/L2A6687.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Women's empowerment</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://i.postimg.cc/KjjZBjgF/L2A6116.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Housing assistance</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://iili.io/qKu8fVV.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Development and Job Training</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://iili.io/qKAMev2.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Youth leadership program</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://iili.io/qKu4fF2.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Volunteer engagement</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Program Item Start -->
+                    <div class="program-item wow fadeInUp" data-wow-delay="1s">
+                        <div class="program-image">
+                            <a href="{% url 'contact' %}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="https://iili.io/qKAMALg.jpg" alt="">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="program-body">
+                            <div class="program-content">
+                                <h3><a href="{% url 'contact' %}">Disability support</a></h3>
+                                <p>Providing resources, education, and advocacy for women's rights.</p>
+                            </div>
+                            <div class="program-button">
+                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Item End -->                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Programs End -->
+
+    <!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Main Footer Box Start -->
+                    <div class="main-footer-box">
+                        <!-- Footer About Start -->
+                        <div class="footer-about">
+                            <!-- Footer Logo Start -->
+                            <div class="footer-logo">
+                                <img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt="">
+                            </div>
+                            <!-- Footer Logo End -->
+                            
+                            <!-- Footer Contact Detail Start -->
+                            <div class="footer-contact-detail">
+                                <div class="footer-contact-item">                                     <h3>Address</h3>                                     <p>Lideta Sub City woreda 02 Torhaylochi above Kidane Building, in front of Mezigebe berihan Primary School</p>                                     <h3><a href="tel:+251-113-7266-47">+251-113-7266-47</a></h3>                                     <h3><a href="tel:+251-113-8441-36">+251-113-8441-36</a></h3>                                     <h3><a href="tel:+251-113-2013-23">+251-113-2013-23</a></h3>                                     <h3><a href="tel:+251-113-8440-28">+251-113-8440-28</a></h3>                                                                      </div>
+                                
+                                <div class="footer-contact-item">
+                                    <p>Need live support!</p>
+                                    <h3><a href="mailto:hulegebbirhan@gmail.com">hulegebbirhan@gmail.com</a></h3>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Detail End -->
+                            
+                            <!-- Footer Social Links Start -->
+                            <div class="footer-social-links">
+                                <h3>Follow on</h3>
+                                <ul>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="programmes.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
+                                </ul>
+                            </div>
+                            <!-- Footer Social Links End -->
+                        </div>
+                        <!-- Footer About End -->
+
+                        <!-- Footer Links Box Start -->
+                        <div class="footer-links-box">
+                            <!-- Newsletter Form Start -->
+                            <div class="newsletter-form">
+                                <form id="newsletterForm" action="programmes.html#" method="POST">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your Email" required="">
+                                        <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Newsletter Form End -->
+
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>Quick link</h3>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'services' %}">services</a></li>
+                                    <li><a href="{% url 'blog' %}">blog</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links footer-service-links">
+                                <h3>services</h3>
+                                 <ul>
+                                    <li><a href="services.html">Milling service</a></li>
+                                    <li><a href="services.html">Advocacy & Awareness Services</a></li>
+                                    <li><a href="services.html">Vocational Training & Skills Development</a></li>
+                                    <li><a href="services.html">Custom Design & Manufacturing</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>support</h3>
+                                <ul>
+                                    <li><a href="programmes.html#">help</a></li>
+                                    <li><a href="programmes.html#">privacy policy</a></li>
+                                    <li><a href="programmes.html#">term's & condition</a></li>
+                                    <li><a href="programmes.html#">support</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                        </div>
+                        <!-- Footer Links Box End -->
+                    </div>
+                    <!-- Main Footer Box End -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright Start -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Copyright Text Start -->
+                        <div class="copyright-text">
+                                                        <p>Copyright © Hulegeb Org  2026 All Rights Reserved.</p>
+                        </div>
+                        <!-- Copyright Text End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Copyright End -->
+    
+    </footer>
+<div class="progress-wrap" id="scrollTopBtn">
+        <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </div>
+    </div>
+    <!-- Main Footer Section End -->
+<div id="dante-custom-trigger" onclick="toggleDante()"></div>
+
+<div id="dante-pop-wrapper">
+<iframe src="https://app.dante-ai.com/embed/?kb_id=d90b9c25-45c7-41eb-8581-c0c79f01d09a&token=9e6a0c9e-0e21-4a9e-8cfe-fa58da498041" allow="clipboard-write; clipboard-read; *;microphone *" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<script>
+  function toggleDante() {
+    var chat = document.getElementById("dante-pop-wrapper");
+    if (chat.style.display === "none" || chat.style.display === "") {
+      chat.style.display = "block";
+    } else {
+      chat.style.display = "none";
+    }
+  }
+</script>
+    <!-- Main Footer Section End -->
+
+    <!-- Jquery Library File -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <!-- Bootstrap js file -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Validator js file -->
+    <script src="{% static 'js/validator.min.js' %}"></script>
+    <!-- SlickNav js file -->
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <!-- Swiper js file -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <!-- Counter js file -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <!-- Isotop js file -->
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+    <!-- Magnific js file -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- SmoothScroll -->
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
+    <!-- Parallax js -->
+    <script src="{% static 'js/parallaxie.js' %}"></script>
+    <!-- MagicCursor js file -->
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/magiccursor.js' %}"></script>
+    <!-- Text Effect js file -->
+    <script src="{% static 'js/SplitText.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <!-- YTPlayer js File -->
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+    <!-- Wow js file -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Main Custom js file -->
+    <script src="{% static 'js/function.js' %}"></script>
+</body>
+</html>

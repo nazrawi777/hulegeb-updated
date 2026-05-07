@@ -1,0 +1,970 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+	 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Our Legacy & History | Hulegeb Training & Rehabilitation</title>
+<meta name="description" content="Explore the history of Hulegeb. Learn how we grew from a vision of holistic care to a leading training and rehabilitation center making a real-world impact.">
+<link rel="canonical" href="https://www.hulegebberhan.org/ourhistory/">
+  <meta name="description" content="Learn about Hulegeb's 60+ year mission to empower blind and physically disabled individuals in Ethiopia through vocational training, employment, and advocacy.">
+  <meta name="keywords" content="Hulegeb, Ethiopia, disability rights, blind, vocational training, NGO, charity, empowerment, inclusion">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | Hulegeb - Empowering Ethiopia's Blind & Disabled Community">
+  <meta property="og:description" content="Learn about Hulegeb's 60+ year mission to empower blind and physically disabled individuals in Ethiopia.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-weaving.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Hulegeb">
+  <meta name="twitter:description" content="Empowering Ethiopia's Blind & Disabled Community since 1952.">
+  
+ 
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/ourhistory.css' %}">
+		<link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+	<!-- Font Awesome Icon Css-->
+	<link href="{% static 'css/all.min.css' %}" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="{% static 'css/mousecursor.css' %}">
+	<!-- Main Custom Css -->
+	<link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
+    <style>
+        #abthead {
+    background-color: #f37a20;
+    color: #fff !important;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 5.6px 6.5px !important;
+}
+ .main-menu ul li a{
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.4em;
+	padding: 14px 20px !important;
+	color: #000 !important;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+	
+} .phone-icon {
+    width: 34px; /* Change to your icon's actual width */
+    height: 34px; /* Change to your icon's actual height */
+    background-color: #000; /* Your desired color */
+    
+    /* Ensure the mask fits */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+ .main-menu ul li a i{
+
+	color: #f37a20 !important;
+
+	
+}
+    </style>
+</head>
+<body>
+
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+						<div id="loading-icon"><img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+    <!-- Header Start -->
+<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="{% url 'index' %}">
+						<img src="https://i.postimg.cc/3w3nVg4V/Hulegeb_Training_Rehabilitation_Logo_1_white.png" alt="Logo">
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li> 
+                                <li class="nav-item submenu"><a class="nav-link" href="#" id="abthead">About</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'ourhistory' %}"id="abthead">Our Legacy</a></li>
+                                       
+                                    </ul>
+                                </li>                              
+                                
+                                <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                                <li>
+    <a href="{% url 'store' %}" id="abthead">Products</a>
+</li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Our Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'programmes' %}">Our Programs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'video_gallery' %}">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}">Donation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> 
+                                <li>
+    <a href="{% url 'admin:index' %}">
+        <i class="fa-solid fa-user"></i>
+    </a>
+</li>                        
+                            </ul>
+                        </div>
+                        <!-- Contact Now Box Start -->
+                        <div class="contact-now-box">
+                            <div class="icon-box">
+    <div class="phone-icon" style="-webkit-mask-image: url('{% static 'images/icon-phone.svg' %}'); mask-image: url('{% static 'images/icon-phone.svg' %}');"></div>
+    </div>
+                            <div class="contact-now-box-content">
+                                <p>need help !</p>
+                                <h3><a href="tel:+251-11-3-72-66-47">+251-11-3-72-66-47</a></h3>                                
+                            </div>
+                        </div>
+                        <!-- Contact Now Box End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+    <main class="about-page">
+        <!-- ========================================
+             HERO SECTION
+             ======================================== -->
+             
+        <section class="hero2" aria-labelledby="hero-title">
+            <div class="hero2-overlay"></div>
+            <div class="container hero2-content">
+                <h1 id="hero2-title" class="hero2-title scroll-animate">
+                    Organizational Track Record
+                    <span class="hero2-title-accent">and Partnerships</span>
+                </h1>
+                <p class="hero2-subtitle scroll-animate">
+                    70 years of empowering Ethiopia's disabled community through dignity, skill, and opportunity
+                </p>
+            </div>
+        </section>
+        
+
+        <!-- ========================================
+             IMPACT METRICS SECTION
+             ======================================== -->
+        <section class="section section--alt" aria-labelledby="metrics-title">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <div class="icon-container">
+                        <!-- Metrics Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h2 id="metrics-title" class="section-title gold-underline">Key Achievement and Impact Metrics</h2>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="counter-item scroll-animate">
+                        <div class="counter-value" data-target="70" data-suffix="">0</div>
+                        <p class="counter-label">Years of uninterrupted service to Ethiopia's disabled community</p>
+                    </div>
+                    <div class="counter-item scroll-animate">
+                        <div class="counter-value" data-target="28287" data-suffix=" m²">0</div>
+                        <p class="counter-label">Square meters of land successfully secured and preserved for its intended social purpose across generations</p>
+                    </div>
+                    <div class="counter-item scroll-animate">
+                        <div class="counter-value" data-target="85">0</div>
+                        <p class="counter-label">Individuals provided with stable employment and dignity</p>
+                    </div>
+                </div>
+                
+                <p class="metrics-highlight scroll-animate">
+                    Successful navigation of multiple political transitions while safeguarding core mission and assets.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             HISTORICAL TIMELINE SECTION
+             ======================================== -->
+        <section class="section" aria-labelledby="history-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="icon-container">
+                        <!-- History Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h2 id="history-title" class="section-title gold-underline">Historical Service and Previous Works</h2>
+                    <p class="section-subtitle">Our journey defines our track record</p>
+                </div>
+                
+                <div class="timeline" role="list" aria-label="Historical timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item scroll-animate" role="listitem">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content content-card">
+                            <span class="timeline-period">1950s-60s</span>
+                            <h3 class="timeline-title">Foundation Era</h3>
+                            <p class="timeline-description">Foundation and establishment of initial rehabilitation service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-animate" role="listitem">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content content-card">
+                            <span class="timeline-period">1966</span>
+                            <h3 class="timeline-title">National Stewardship</h3>
+                            <p class="timeline-description">Assumed national stewardship of key institutions (Bako School, Welayta Sodo Home) from international partners</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-animate" role="listitem">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content content-card">
+                            <span class="timeline-period">1970s-80s</span>
+                            <h3 class="timeline-title">Nationwide Expansion</h3>
+                            <p class="timeline-description">Expanded regional production room centers, providing nationwide vocational training</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-animate" role="listitem">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content content-card">
+                            <span class="timeline-period">2000</span>
+                            <h3 class="timeline-title">Legal Re-registration</h3>
+                            <p class="timeline-description">Successfully re-registered under new legal frameworks, demonstrating adaptability</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-animate" role="listitem">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content content-card">
+                            <span class="timeline-period">2000-Present</span>
+                            <h3 class="timeline-title">Modern Era</h3>
+                            <p class="timeline-description">Consolidated operations, professionalized governance, and launched sustainability initiatives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             PARTNERS & LEGAL SECTION
+             ======================================== -->
+        <section class="section section--card" aria-labelledby="partners-title legal-title">
+            <div class="container">
+                <div class="grid-2">
+                    <!-- Partners -->
+                    <div class="scroll-animate">
+                        <div class="section-header">
+                            <div class="icon-container">
+                                <!-- Partners Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h2 id="partners-title" class="section-title gold-underline">Strategic Partnerships</h2>
+                        </div>
+                        <div class="content-card">
+                            <p class="text-muted">
+                                Historically, we have collaborated with international organizations such as the Christian Blind Mission (CBM), the Sudan Interior Mission (SIM), and various Italian Catholic Missions. Today, we seek partnerships with government bodies (Social Affairs Offices), local business, civil society organizations, and international development agencies focused on inclusive economic growth.
+                            </p>
+                            <div class="pills-container">
+                                <span class="pill">Christian Blind Mission (CBM)</span>
+                                <span class="pill">Sudan Interior Mission (SIM)</span>
+                                <span class="pill">Various Italian Catholic Missions</span>
+                                <span class="pill">Government Social Affairs Offices</span>
+                                <span class="pill">Local businesses and civil society organizations</span>
+                                <span class="pill">International development agencies focused on inclusive economic growth</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Legal Standing -->
+                    <div class="scroll-animate">
+                        <div class="section-header">
+                            <div class="icon-container">
+                                <!-- Legal Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <h2 id="legal-title" class="section-title gold-underline">Legal and Regulatory Standing</h2>
+                        </div>
+                        <div class="content-card">
+                            <p class="text-muted">
+                                The association is fully compliant with Ethiopian law. It was formally re-registered on 
+                                <time datetime="2000-07-28" class="date-highlight">July 28, 2000</time>, 
+                                under the Civil Society Organization Authority, in accordance with the Ethiopian Civil Code No. 404 and Associations Registration Regulation No. 321/1959. Our operations and governance are regularly reviewed to maintain this standing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             GOVERNANCE SECTION
+             ======================================== -->
+        <section class="section" aria-labelledby="governance-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="icon-container">
+                        <!-- Governance Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V7l8-4v18"></path>
+                            <path d="M19 21V11l-6-4"></path>
+                            <path d="M9 9v.01"></path>
+                            <path d="M9 12v.01"></path>
+                            <path d="M9 15v.01"></path>
+                            <path d="M9 18v.01"></path>
+                        </svg>
+                    </div>
+                    <h2 id="governance-title" class="section-title gold-underline">Governance and Leadership</h2>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="content-card scroll-animate">
+                        <h3 class="card-title">Executive Committee</h3>
+                        <p class="text-muted">
+                            Composed of seven elected professionals committed to disability inclusion, providing strategic guidance and oversight.
+                        </p>
+                    </div>
+                    <div class="content-card scroll-animate">
+                        <h3 class="card-title">Management Team</h3>
+                        <p class="text-muted">
+                            Led by a General Manager with extensive experience in non-profit management and vocational training, supported by department heads skilled in production, training, and administration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             COMMUNITY & FUTURE SECTION
+             ======================================== -->
+        <section class="section section--alt" aria-labelledby="community-title future-title">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="scroll-animate">
+                        <div class="section-header">
+                            <div class="icon-container">
+                                <!-- Community Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    <circle cx="10" cy="8" r="2"></circle>
+                                    <path d="M16 11h-3"></path>
+                                    <path d="M16 8h-1"></path>
+                                    <path d="M8 14h8"></path>
+                                </svg>
+                            </div>
+                            <h2 id="community-title" class="section-title gold-underline">Community Engagement</h2>
+                        </div>
+                        <div class="content-card">
+                            <p class="text-muted">
+                                We engage deeply with our primary stakeholders, persons with disabilities, by involving them directly in program design and as the majority of our workforce. We collaborate with local communities, government social affairs bureaus, and other disability associations to advocate for inclusive policies and raise awareness, ensuring our work is community-embedded and responsive.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="scroll-animate">
+                        <div class="section-header">
+                            <div class="icon-container">
+                                <!-- Future Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <h2 id="future-title" class="section-title gold-underline">Future Strategic Direction</h2>
+                        </div>
+                        <div class="content-card">
+                            <p class="text-muted">
+                                Our primary strategic direction is the development of our endowed land. With secured permits, we plan to construct modern facilities for expanded production workshops, training centers, administrative offices, and retail shops. This project aims to create a self-sustaining ecosystem that guarantees our financial independence, scales our impact, and secures a permanent hub for disability empowerment for future generations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             RESPONSIBILITIES SECTION
+             ======================================== -->
+        <section class="section" aria-labelledby="responsibilities-title">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <div class="icon-container">
+                        <!-- Award Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h2 id="responsibilities-title" class="section-title gold-underline">Awards and Recognitions</h2>
+                    <p class="section-subtitle">Our Community Responsibilities</p>
+                </div>
+                
+                <!-- Environment Responsibility -->
+                <article class="responsibility-card content-card scroll-animate" aria-labelledby="env-title">
+                    <div class="responsibility-header">
+                        <div class="icon-container icon-container--olive">
+                            <!-- Leaf Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 id="env-title" class="card-title">Environment Responsibility</h3>
+                            <p class="text-muted">
+                                We recognize that protecting the environment is essential to sustainable development. Hulegeb is committed to reducing our ecological footprint through conscious material choice, waste reduction, and responsible production.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-list">
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--olive"></span>
+                            <div>
+                                <h4 class="practice-title">Natural & Local Materials</h4>
+                                <p class="practice-description">We prioritize sustainably sourced, natural materials such as sheep wool, cotton, and locally harvested wood, minimizing synthetic inputs and reducing carbon emissions from transportation.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--olive"></span>
+                            <div>
+                                <h4 class="practice-title">Low Waste Production</h4>
+                                <p class="practice-description">From fabric scraps to wood off-cuts, we repurpose leftover materials into smaller products like doormats, brushes, or stuffing, ensuring minimal waste in our manufacturing process.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--olive"></span>
+                            <div>
+                                <h4 class="practice-title">Eco-Friendly Practice</h4>
+                                <p class="practice-description">Our natural dyes, traditional hand weaving techniques, and non-toxic finishes ensure that Productsion processes are safe for both our artisans and the environment.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--olive"></span>
+                            <div>
+                                <h4 class="practice-title">Long-Lasting Production</h4>
+                                <p class="practice-description">We craft durable, high-quality goods designed to withstand years of use—encouraging conscious consumption and reducing the cycle of waste.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--olive"></span>
+                            <div>
+                                <h4 class="practice-title">Land Stewardship</h4>
+                                <p class="practice-description">Our endowed land in Addis Ababa is not only a hub for training and production but also a responsibly managed asset. Future development plans include eco-conscious building designs and green spaces that respect the local ecosystem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Social Responsibility -->
+                <article class="responsibility-card content-card scroll-animate" aria-labelledby="social-title">
+                    <div class="responsibility-header">
+                        <div class="icon-container icon-container--terracotta">
+                            <!-- Social Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 id="social-title" class="card-title">Our Social Responsibility</h3>
+                            <p class="text-muted">
+                                At Hulegeb social responsibility is the foundation of who we are. We are not just an organization serving the blind and physically disabled—we are a community created, led, and sustained by them. Over 80% of our workforce and leadership are persons with disabilities, ensuring every decision and action is rooted in lived experience, respect, and true representation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-list">
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--terracotta"></span>
+                            <div>
+                                <h4 class="practice-title">Inclusive Employment and Leadership</h4>
+                                <p class="practice-description">We go beyond offering jobs—we build careers, cultivate leaders, and empower our team to shape the organization from within.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--terracotta"></span>
+                            <div>
+                                <h4 class="practice-title">Dignity through Skills</h4>
+                                <p class="practice-description">Our hands-on vocational training in weaving, carpentry, brush-making and other trades is designed to transition individuals from marginalization to economic independence and self-reliance.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--terracotta"></span>
+                            <div>
+                                <h4 class="practice-title">Advocacy and Awareness</h4>
+                                <p class="practice-description">We actively partner with government bodies, community groups, and media to advance disability rights, disrupt stereotypes, and influence inclusive policies at all levels.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--terracotta"></span>
+                            <div>
+                                <h4 class="practice-title">Gender Equality</h4>
+                                <p class="practice-description">We maintain a near-equal gender balance across all roles, ensuring women with disabilities are prominently represented as artisans, managers, and decision-makers.</p>
+                            </div>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-dot practice-dot--terracotta"></span>
+                            <div>
+                                <h4 class="practice-title">Community-centered Design</h4>
+                                <p class="practice-description">Everything we do—from product creation to program development—is shaped in direct dialogue with the disability community, guaranteeing relevance, authenticity, and lasting impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Economic Responsibility -->
+                <article class="responsibility-card content-card scroll-animate" aria-labelledby="economic-title">
+                    <div class="responsibility-header">
+                        <div class="icon-container icon-container--gold">
+                            <!-- Economic Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 id="economic-title" class="card-title">Our Economical Responsibility</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="economic-content text-muted">
+                        <p>At Hulegeb, economic responsibility means creating systems that empower, sustain, and include. We move beyond aid to build a self-reliant ecosystem where persons with disabilities are not beneficiaries but producers, earners and leaders.</p>
+                        
+                        <p>Our model integrates vocational training with immediate income-generating work ensuring skills translate directly into livelihoods. We maintain stability through diversified streams—product sales, workshop training, land-based revenue, and strategic partnerships. By developing our endowed land for long-term community wealth, we invest in sustainable growth that benefits generations.</p>
+                        
+                        <p>We prioritize local sourcing and employ artisans with disabilities across production, packaging, and sales—keeping opportunity within the community. All resources are managed with transparency and accountability under elected governance, ensuring every investment advances our mission.</p>
+                        
+                        <p>Hulegeb stands as a custodian of trust, a catalyst for inclusion, and a blueprint for disability-led development—proving that true economic power lies in empowerment not dependence.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========================================
+             PRODUCTION METHOD SECTION
+             ======================================== -->
+        <section class="section section--card" aria-labelledby="production-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="icon-container">
+                        <!-- Production Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h2 id="production-title" class="section-title gold-underline">Our Method of Production</h2>
+                    <p class="section-subtitle">We believe production should empower—not exploit. That's why our workshops are designed as spaces for learning, creativity, and purpose.</p>
+                </div>
+                
+                <!-- Desktop Grid -->
+                <div class="production-grid">
+                    <div class="content-card scroll-animate">
+                        <h4 class="card-title--sm">Inclusive Employment and Training Integration</h4>
+                        <p class="text-muted text-sm">The majority of Productsion team is composed of blind and physically disabled artisans. We operate on an apprentice-to-artisan model, where vocational training and paid work happen side by side. Trainees learn by doing whether weaving carpets, crafting furniture, or assembling brushes—under the guidance of experienced mentors.</p>
+                    </div>
+                    <div class="content-card scroll-animate">
+                        <h4 class="card-title--sm">Blend of Traditional and Adaptive Techniques</h4>
+                        <p class="text-muted text-sm">We honor Ethiopian weaving and woodworking traditions while incorporating adaptive tools and techniques that enable artisans with varying abilities to participate fully. Looms, brushes, and workstations are often customized to ensure accessibility and comfort.</p>
+                    </div>
+                    <div class="content-card scroll-animate">
+                        <h4 class="card-title--sm">Sustainable and Local Sourcing</h4>
+                        <p class="text-muted text-sm">We prioritize natural, locally sourced materials—such as sheep wool, cotton, and responsibly harvested wood—reducing environmental impact and supporting the regional economy.</p>
+                    </div>
+                    <div class="content-card scroll-animate">
+                        <h4 class="card-title--sm">Small-Batch, Quality-focused Production</h4>
+                        <p class="text-muted text-sm">Our items are crafted in small batches with attention to detail, durability, and aesthetic value. This allows for consistent quality controls and ensures each product meets both functional and market standards.</p>
+                    </div>
+                    <div class="content-card scroll-animate">
+                        <h4 class="card-title--sm">Integrated Social Enterprise Model</h4>
+                        <p class="text-muted text-sm">Production is not isolated from our mission: it fuels it. Revenues from product sales directly fund training programs, fair wages, and facility improvements, creating a self-reinforcing cycle of empowerment.</p>
+                    </div>
+                </div>
+                
+                <!-- Mobile Accordion -->
+                <div class="production-accordion">
+                    <div class="accordion" role="tablist">
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" 
+                                    aria-expanded="false" 
+                                    aria-controls="prod-1"
+                                    role="tab">
+                                <span>Inclusive Employment and Training Integration</span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div id="prod-1" class="accordion-content" role="tabpanel">
+                                <p>The majority of Productsion team is composed of blind and physically disabled artisans. We operate on an apprentice-to-artisan model, where vocational training and paid work happen side by side. Trainees learn by doing whether weaving carpets, crafting furniture, or assembling brushes—under the guidance of experienced mentors.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" 
+                                    aria-expanded="false" 
+                                    aria-controls="prod-2"
+                                    role="tab">
+                                <span>Blend of Traditional and Adaptive Techniques</span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div id="prod-2" class="accordion-content" role="tabpanel">
+                                <p>We honor Ethiopian weaving and woodworking traditions while incorporating adaptive tools and techniques that enable artisans with varying abilities to participate fully. Looms, brushes, and workstations are often customized to ensure accessibility and comfort.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" 
+                                    aria-expanded="false" 
+                                    aria-controls="prod-3"
+                                    role="tab">
+                                <span>Sustainable and Local Sourcing</span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div id="prod-3" class="accordion-content" role="tabpanel">
+                                <p>We prioritize natural, locally sourced materials—such as sheep wool, cotton, and responsibly harvested wood—reducing environmental impact and supporting the regional economy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" 
+                                    aria-expanded="false" 
+                                    aria-controls="prod-4"
+                                    role="tab">
+                                <span>Small-Batch, Quality-focused Production</span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div id="prod-4" class="accordion-content" role="tabpanel">
+                                <p>Our items are crafted in small batches with attention to detail, durability, and aesthetic value. This allows for consistent quality controls and ensures each product meets both functional and market standards.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" 
+                                    aria-expanded="false" 
+                                    aria-controls="prod-5"
+                                    role="tab">
+                                <span>Integrated Social Enterprise Model</span>
+                                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div id="prod-5" class="accordion-content" role="tabpanel">
+                                <p>Production is not isolated from our mission: it fuels it. Revenues from product sales directly fund training programs, fair wages, and facility improvements, creating a self-reinforcing cycle of empowerment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             RECOGNITION SECTION
+             ======================================== -->
+        <section class="section" aria-labelledby="recognition-title">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <div class="icon-container">
+                        <!-- Award Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h2 id="recognition-title" class="section-title gold-underline">Recognition of Impact and Integrity</h2>
+                    <p class="section-subtitle">Throughout our decades of service, Hulegeb Association has been honored to receive formal recognition from government bodies, international partners, and civil society organizations.</p>
+                </div>
+                
+                <div class="recognition-grid">
+                    <div class="content-card recognition-card scroll-animate">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="card-title--sm">Government and Regulatory Validation</h4>
+                        <p class="text-muted text-sm">Our association operates in full compliance with Ethiopian law and has been formally recognized by relevant authorities. Our most significant legal validation is our official re-registration certificate issued by the Civil Society Organization Authority on <time datetime="2000-07-28">July 28, 2000</time>, under Ethiopian Civil Code and Associations Registration Regulation.</p>
+                    </div>
+                    
+                    <div class="content-card recognition-card scroll-animate">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="card-title--sm">International and Partnership Recognitions</h4>
+                        <ul class="recognition-list text-muted text-sm">
+                            <li>Christian Blind Mission (CBM)</li>
+                            <li>Sudan Interior Mission (SIM)</li>
+                            <li>Various Italian Catholic Missions and NGOs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card recognition-card scroll-animate">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="card-title--sm">Awards for Social Impact and Innovation</h4>
+                        <p class="text-muted text-sm">Specific awards can be listed here as received.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+    <!-- Main Footer Section Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Main Footer Box Start -->
+                    <div class="main-footer-box">
+                        <!-- Footer About Start -->
+                        <div class="footer-about">
+                            <!-- Footer Logo Start -->
+                            <div class="footer-logo">
+                                <img src="https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png" alt="">
+                            </div>
+                            <!-- Footer Logo End -->
+                            
+                            <!-- Footer Contact Detail Start -->
+                            <div class="footer-contact-detail">
+                                <div class="footer-contact-item">                                     <h3>Address</h3>                                     <p>Lideta Sub City woreda 02 Torhaylochi above Kidane Building, in front of Mezigebe berihan Primary School</p>                                     <h3><a href="tel:+251-113-7266-47">+251-113-7266-47</a></h3>                                     <h3><a href="tel:+251-113-8441-36">+251-113-8441-36</a></h3>                                     <h3><a href="tel:+251-113-2013-23">+251-113-2013-23</a></h3>                                     <h3><a href="tel:+251-113-8440-28">+251-113-8440-28</a></h3>                                                                      </div>
+                                
+                                <div class="footer-contact-item">
+                                    <p>Need live support!</p>
+                                    <h3><a href="mailto:hulegebbirhan@gmail.com">hulegebbirhan@gmail.com</a></h3>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Detail End -->
+                            
+                            <!-- Footer Social Links Start -->
+                            <div class="footer-social-links">
+                                <h3>Follow on</h3>
+                                <ul>
+                                    <li><a href="about.html#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                                    <li><a href="about.html#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="about.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="about.html#"><i class="fa-brands fa-instagram"></i></a></li>                                    								
+                                </ul>
+                            </div>
+                            <!-- Footer Social Links End -->
+                        </div>
+                        <!-- Footer About End -->
+
+                        <!-- Footer Links Box Start -->
+                        <div class="footer-links-box">
+                            <!-- Newsletter Form Start -->
+                            <div class="newsletter-form">
+                                <form id="newsletterForm" action="about.html#" method="POST">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="mail" placeholder="Enter Your Email" required="">
+                                        <button type="submit" class="newsletter-btn"><i class="fa-regular fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Newsletter Form End -->
+
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>Quick link</h3>
+                                <ul>
+                                    <li><a href="{% url 'index' %}">home</a></li>
+                                    <li><a href="{% url 'about' %}">about us</a></li>
+                                    <li><a href="{% url 'services' %}">services</a></li>
+                                    <li><a href="{% url 'blog' %}">blog</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links footer-service-links">
+                                <h3>services</h3>
+                                 <ul>
+                                    <li><a href="services.html">Milling service</a></li>
+                                    <li><a href="services.html">Advocacy & Awareness Services</a></li>
+                                    <li><a href="services.html">Vocational Training & Skills Development</a></li>
+                                    <li><a href="services.html">Custom Design & Manufacturing</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                            
+                            <!-- Footer Links Start -->
+                            <div class="footer-links">
+                                <h3>support</h3>
+                                <ul>
+                                    <li><a href="about.html#">help</a></li>
+                                    <li><a href="about.html#">privacy policy</a></li>
+                                    <li><a href="about.html#">term's & condition</a></li>
+                                    <li><a href="about.html#">support</a></li>
+                                </ul>
+                            </div>
+                            <!-- Footer Links End -->
+                        </div>
+                        <!-- Footer Links Box End -->
+                    </div>
+                    <!-- Main Footer Box End -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Copyright Start -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Copyright Text Start -->
+                        <div class="copyright-text">
+                                                        <p>Copyright © Hulegeb Org  2026 All Rights Reserved.</p>
+                        </div>
+                        <!-- Copyright Text End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Copyright End -->
+    
+    </footer>
+<div class="progress-wrap" id="scrollTopBtn">
+        <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </div>
+    </div>
+    <!-- Main Footer Section End -->
+<div id="dante-custom-trigger" onclick="toggleDante()"></div>
+
+<div id="dante-pop-wrapper">
+  <iframe src="https://app.dante-ai.com/embed/?kb_id=d90b9c25-45c7-41eb-8581-c0c79f01d09a&token=9e6a0c9e-0e21-4a9e-8cfe-fa58da498041" allow="clipboard-write; clipboard-read; *;microphone *" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<script>
+  function toggleDante() {
+    var chat = document.getElementById("dante-pop-wrapper");
+    if (chat.style.display === "none" || chat.style.display === "") {
+      chat.style.display = "block";
+    } else {
+      chat.style.display = "none";
+    }
+  }
+</script>
+    <!-- Main Footer Section End -->
+
+    <!-- Jquery Library File -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <!-- Bootstrap js file -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Validator js file -->
+    <script src="{% static 'js/validator.min.js' %}"></script>
+    <!-- SlickNav js file -->
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <!-- Swiper js file -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <!-- Counter js file -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <!-- Isotop js file -->
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+    <!-- Magnific js file -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- SmoothScroll -->
+    <script src="{% static 'js/SmoothScroll.js' %}"></script>
+    <!-- Parallax js -->
+    <script src="{% static 'js/parallaxie.js' %}"></script>
+    <!-- MagicCursor js file -->
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/magiccursor.js' %}"></script>
+    <!-- Text Effect js file -->
+    <script src="{% static 'js/SplitText.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <!-- YTPlayer js File -->
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+    <!-- Wow js file -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- Main Custom js file -->
+    <script src="{% static 'js/function.js' %}"></script>
+    <script src="{% static 'js/ourhistory.js' %}"></script>
+</body>
+</html>
