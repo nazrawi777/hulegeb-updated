@@ -550,10 +550,19 @@ function getProductImage(productOrId) {
   const product = typeof productOrId === 'object'
     ? productOrId
     : (window.PRODUCTS || []).find(p => String(p.id) === String(productOrId) || p.slug === productOrId);
+
   if (!product) return "";
-  if (product.image) return product.image;
-  if (product.images && product.images.length > 0) return product.images[0];
-  return "";
+
+  let img = product.image || product.image_url;
+
+  if (!img) return "";
+
+  // Fix relative media path (Codespaces / local Django issue)
+  if (img.startsWith("/media")) {
+    return window.location.origin + img;
+  }
+
+  return img;
 }
 
 window.PRODUCTS = [];

@@ -89,7 +89,7 @@ def _absolute_media_url(request, url):
 
 
 def _product_to_dict(product, request):
-    image_url = _absolute_media_url(request, product.get_image_url())
+    image_url = product.get_image_url()
     return {
         'id': product.id,
         'name': product.name,
