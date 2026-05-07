@@ -20,4 +20,7 @@ urlpatterns = [
     path('api/products/', views.api_products, name='api_products'),
     path('api/products/<int:product_id>/', views.api_product_detail, name='api_product_detail'),
     path('api/categories/', views.api_categories, name='api_categories'),
+    path('api/team/', views.api_team, name='api_team'),
+    path('api/programmes/', views.api_programmes, name='api_programmes'),
+    path('api/donation-info/', views.api_donation_info, name='api_donation_info'),
 ]

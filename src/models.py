@@ -276,3 +276,108 @@ class Product(models.Model):
         if self.short_description:
             return self.short_description
         return self.description[:180]
+
+
+class TeamMember(models.Model):
+    """Team member profile manageable through Django admin."""
+    name = models.CharField(max_length=200)
+    role = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='team/', blank=True, null=True, help_text="Upload a team member image")
+    image_url = models.URLField(max_length=500, blank=True, help_text="Or provide an external image URL")
+    phone = models.CharField(max_length=50, blank=True)
+    email = models.EmailField(blank=True)
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    is_active = models.BooleanField(default=True, help_text="Show team member on website")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'name']
+        verbose_name = "Team Member"
+        verbose_name_plural = "Team Members"
+
+    def __str__(self):
+        return f"{self.name} - {self.role}"
+
+    def clean(self):
+        if not self.image and not self.image_url:
+            raise ValidationError('You must provide either an uploaded image or an image URL.')
+
+    def get_image_url(self):
+        if self.image:
+            return self.image.url
+        return self.image_url or ""
+
+
+class Programme(models.Model):
+    """Programme card manageable through Django admin."""
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='programmes/', blank=True, null=True, help_text="Upload a programme image")
+    image_url = models.URLField(max_length=500, blank=True, help_text="Or provide an external image URL")
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    is_active = models.BooleanField(default=True, help_text="Show programme on website")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'title']
+        verbose_name = "Programme"
+        verbose_name_plural = "Programmes"
+
+    def __str__(self):
+        return self.title
+
+    def clean(self):
+        if not self.image and not self.image_url:
+            raise ValidationError('You must provide either an uploaded image or an image URL.')
+
+    def get_image_url(self):
+        if self.image:
+            return self.image.url
+        return self.image_url or ""
+
+
+class DonationPurpose(models.Model):
+    """Donation purpose label shown on donation account cards."""
+    label = models.CharField(max_length=160)
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'label']
+        verbose_name = "Donation Purpose"
+        verbose_name_plural = "Donation Purposes"
+
+    def __str__(self):
+        return self.label
+
+
+class BankAccount(models.Model):
+    """Official donation bank account manageable through Django admin."""
+    purpose = models.ForeignKey(
+        DonationPurpose,
+        related_name='bank_accounts',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        help_text="Optional purpose shown on the donation card",
+    )
+    bank_name = models.CharField(max_length=200)
+    account_number = models.CharField(max_length=100)
+    account_holder = models.CharField(max_length=200, blank=True)
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'bank_name', 'account_number']
+        verbose_name = "Bank Account"
+        verbose_name_plural = "Bank Accounts"
+
+    def __str__(self):
+        return f"{self.bank_name} - {self.account_number}"
+

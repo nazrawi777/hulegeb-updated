@@ -1,6 +1,17 @@
+from django.db import models
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
-from .models import BlogPost, Category, GalleryItem, HeroSlide, Product
+from .models import (
+    BankAccount,
+    BlogPost,
+    Category,
+    DonationPurpose,
+    GalleryItem,
+    HeroSlide,
+    Product,
+    Programme,
+    TeamMember,
+)
 from django.core.paginator import Paginator
 
 
@@ -163,3 +174,80 @@ def api_categories(request):
             ],
         })
     return JsonResponse({'categories': data})
+
+
+def _team_member_to_dict(member, request):
+    image_url = _absolute_media_url(request, member.get_image_url())
+    return {
+        'id': member.id,
+        'name': member.name,
+        'role': member.role,
+        'phone': member.phone,
+        'email': member.email,
+        'image': image_url,
+        'image_url': image_url,
+    }
+
+
+def api_team(request):
+    members = TeamMember.objects.filter(is_active=True)
+    data = [_team_member_to_dict(member, request) for member in members]
+    return JsonResponse({'team': data})
+
+
+def _programme_to_dict(programme, request):
+    image_url = _absolute_media_url(request, programme.get_image_url())
+    return {
+        'id': programme.id,
+        'title': programme.title,
+        'description': programme.description,
+        'image': image_url,
+        'image_url': image_url,
+    }
+
+
+def api_programmes(request):
+    programmes = Programme.objects.filter(is_active=True)
+    data = [_programme_to_dict(programme, request) for programme in programmes]
+    return JsonResponse({'programmes': data})
+
+
+def _bank_account_to_dict(account):
+    return {
+        'id': account.id,
+        'bank_name': account.bank_name,
+        'bank': account.bank_name,
+        'account_number': account.account_number,
+        'number': account.account_number,
+        'account_holder': account.account_holder,
+        'holder': account.account_holder,
+        'purpose': account.purpose.label if account.purpose else 'General Donation',
+        'purpose_id': account.purpose_id,
+    }
+
+
+def api_donation_info(request):
+    purposes = DonationPurpose.objects.filter(is_active=True).prefetch_related('bank_accounts')
+    accounts = (
+        BankAccount.objects.filter(is_active=True)
+        .filter(models.Q(purpose__isnull=True) | models.Q(purpose__is_active=True))
+        .select_related('purpose')
+    )
+    purpose_data = [
+        {
+            'id': purpose.id,
+            'label': purpose.label,
+            'accounts': [
+                _bank_account_to_dict(account)
+                for account in purpose.bank_accounts.all()
+                if account.is_active
+            ],
+        }
+        for purpose in purposes
+    ]
+    return JsonResponse({
+        'purposes': purpose_data,
+        'bank_accounts': [_bank_account_to_dict(account) for account in accounts],
+        'accounts': [_bank_account_to_dict(account) for account in accounts],
+    })
+

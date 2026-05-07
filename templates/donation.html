@@ -621,38 +621,67 @@
       building: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>'
     };
 
-    var ACCOUNTS = [
-      { bank: "Global Trust Bank",     holder: "Hope Foundation Intl.", number: "1023 4456 7789 01", branch: "Main Branch",      purpose: "Emergency Relief",  tone: "orange", icon: ICONS.lifebuoy },
-      { bank: "Unity National Bank",   holder: "Hope Foundation Intl.", number: "5567 8821 3344 09", branch: "Downtown Branch",  purpose: "Education Support", tone: "blue",   icon: ICONS.grad },
-      { bank: "Horizon Commerce Bank", holder: "Hope Foundation Intl.", number: "8890 1122 4455 77", branch: "Central Branch",   purpose: "General Donation",  tone: "orange", icon: ICONS.bank },
-      { bank: "Meridian Savings",      holder: "Hope Foundation Intl.", number: "3344 7788 9911 22", branch: "Riverside Branch", purpose: "Food Program",      tone: "blue",   icon: ICONS.utensil }
-    ];
-
     var grid = document.getElementById("nexoriumGridRail");
 
-    ACCOUNTS.forEach(function (acc) {
-      var card = document.createElement("article");
-      card.className = "nexorium-bank-shell";
-      card.setAttribute("data-tone", acc.tone);
-      card.innerHTML =
-        '<span class="nexorium-accent-rail"></span>' +
-        '<div class="nexorium-head-row">' +
-          '<div class="nexorium-icon-tile">' + acc.icon + '</div>' +
-          '<span class="nexorium-purpose-pill">' + acc.purpose + '</span>' +
-        '</div>' +
-        '<h3 class="nexorium-bank-name">' + acc.bank + '</h3>' +
-        '<p class="nexorium-holder-line">' + acc.holder + '</p>' +
-        '<div class="nexorium-acct-glyph">' +
-          '<p class="nexorium-acct-label">Account Number</p>' +
-          '<p class="nexorium-acct-digits">' + acc.number + '</p>' +
-        '</div>' +
-        '<p class="nexorium-branch-line">' + ICONS.building + acc.branch + '</p>' +
-        '<button class="solvique-copy-node" type="button" data-number="' + acc.number.replace(/\s/g, "") + '" data-bank="' + acc.bank + '" data-purpose="' + acc.purpose + '">' +
-          '<span class="solvique-copy-icon">' + ICONS.copy + '</span>' +
-          '<span class="solvique-copy-label">Copy Account Number</span>' +
-        '</button>';
-      grid.appendChild(card);
-    });
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>'"]/g, function (char) {
+        return {"&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", "\"": "&quot;"}[char];
+      });
+    }
+
+    function accountIcon(index) {
+      var iconList = [ICONS.lifebuoy, ICONS.grad, ICONS.bank, ICONS.utensil];
+      return iconList[index % iconList.length];
+    }
+
+    function renderAccounts(accounts) {
+      grid.innerHTML = "";
+      if (!accounts.length) {
+        grid.innerHTML = '<p class="veltrixa-subline">No donation accounts are available right now.</p>';
+        return;
+      }
+
+      accounts.forEach(function (acc, index) {
+        var bank = acc.bank_name || acc.bank || "";
+        var holder = acc.account_holder || acc.holder || "Hulegeb";
+        var number = acc.account_number || acc.number || "";
+        var purpose = acc.purpose || "General Donation";
+        var tone = index % 2 === 0 ? "orange" : "blue";
+        var card = document.createElement("article");
+        card.className = "nexorium-bank-shell";
+        card.setAttribute("data-tone", tone);
+        card.innerHTML =
+          '<span class="nexorium-accent-rail"></span>' +
+          '<div class="nexorium-head-row">' +
+            '<div class="nexorium-icon-tile">' + accountIcon(index) + '</div>' +
+            '<span class="nexorium-purpose-pill">' + escapeHtml(purpose) + '</span>' +
+          '</div>' +
+          '<h3 class="nexorium-bank-name">' + escapeHtml(bank) + '</h3>' +
+          '<p class="nexorium-holder-line">' + escapeHtml(holder) + '</p>' +
+          '<div class="nexorium-acct-glyph">' +
+            '<p class="nexorium-acct-label">Account Number</p>' +
+            '<p class="nexorium-acct-digits">' + escapeHtml(number) + '</p>' +
+          '</div>' +
+          '<p class="nexorium-branch-line">' + ICONS.building + 'Official Hulegeb donation account</p>' +
+          '<button class="solvique-copy-node" type="button" data-number="' + escapeHtml(number.replace(/\s/g, "")) + '" data-bank="' + escapeHtml(bank) + '" data-purpose="' + escapeHtml(purpose) + '">' +
+            '<span class="solvique-copy-icon">' + ICONS.copy + '</span>' +
+            '<span class="solvique-copy-label">Copy Account Number</span>' +
+          '</button>';
+        grid.appendChild(card);
+      });
+    }
+
+    fetch("{% url 'api_donation_info' %}")
+      .then(function (response) {
+        if (!response.ok) throw new Error("Unable to load donation information");
+        return response.json();
+      })
+      .then(function (data) {
+        renderAccounts(data.bank_accounts || data.accounts || []);
+      })
+      .catch(function () {
+        grid.innerHTML = '<p class="veltrixa-subline">Donation information could not be loaded. Please try again later.</p>';
+      });
 
     // Toast
     var toastEl = document.getElementById("aurelineToastFlare");

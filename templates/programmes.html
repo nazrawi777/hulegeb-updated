@@ -170,143 +170,9 @@
     <!-- Page Programs Start -->
     <div class="page-programs">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Program Item Start -->
-                    <div class="program-item wow fadeInUp">
-                        <div class="program-image">
-                            <a href="{% url 'contact' %}" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://i.postimg.cc/VvQRbrh9/L2A6687.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="program-body">
-                            <div class="program-content">
-                                <h3><a href="{% url 'contact' %}">Women's empowerment</a></h3>
-                                <p>Providing resources, education, and advocacy for women's rights.</p>
-                            </div>
-                            <div class="program-button">
-                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Program Item End -->                    
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <!-- Program Item Start -->
-                    <div class="program-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="program-image">
-                            <a href="{% url 'contact' %}" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://i.postimg.cc/KjjZBjgF/L2A6116.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="program-body">
-                            <div class="program-content">
-                                <h3><a href="{% url 'contact' %}">Housing assistance</a></h3>
-                                <p>Providing resources, education, and advocacy for women's rights.</p>
-                            </div>
-                            <div class="program-button">
-                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Program Item End -->                    
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <!-- Program Item Start -->
-                    <div class="program-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="program-image">
-                            <a href="{% url 'contact' %}" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKu8fVV.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="program-body">
-                            <div class="program-content">
-                                <h3><a href="{% url 'contact' %}">Development and Job Training</a></h3>
-                                <p>Providing resources, education, and advocacy for women's rights.</p>
-                            </div>
-                            <div class="program-button">
-                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Program Item End -->                    
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Program Item Start -->
-                    <div class="program-item wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="program-image">
-                            <a href="{% url 'contact' %}" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKAMev2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="program-body">
-                            <div class="program-content">
-                                <h3><a href="{% url 'contact' %}">Youth leadership program</a></h3>
-                                <p>Providing resources, education, and advocacy for women's rights.</p>
-                            </div>
-                            <div class="program-button">
-                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Program Item End -->                    
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <!-- Program Item Start -->
-                    <div class="program-item wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="program-image">
-                            <a href="{% url 'contact' %}" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKu4fF2.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="program-body">
-                            <div class="program-content">
-                                <h3><a href="{% url 'contact' %}">Volunteer engagement</a></h3>
-                                <p>Providing resources, education, and advocacy for women's rights.</p>
-                            </div>
-                            <div class="program-button">
-                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Program Item End -->                    
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <!-- Program Item Start -->
-                    <div class="program-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="program-image">
-                            <a href="{% url 'contact' %}" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="https://iili.io/qKAMALg.jpg" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="program-body">
-                            <div class="program-content">
-                                <h3><a href="{% url 'contact' %}">Disability support</a></h3>
-                                <p>Providing resources, education, and advocacy for women's rights.</p>
-                            </div>
-                            <div class="program-button">
-                                <a href="{% url 'contact' %}" class="readmore-btn">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Program Item End -->                    
+            <div class="row" id="programmesGrid">
+                <div class="col-12 text-center">
+                    <p>Loading programmes...</p>
                 </div>
             </div>
         </div>
@@ -456,6 +322,66 @@
 </script>
     <!-- Main Footer Section End -->
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var grid = document.getElementById("programmesGrid");
+    if (!grid) return;
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>'"]/g, function (char) {
+        return {"&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", "\"": "&quot;"}[char];
+      });
+    }
+
+    function renderEmpty(message) {
+      grid.innerHTML = '<div class="col-12 text-center"><p>' + escapeHtml(message) + '</p></div>';
+    }
+
+    fetch("{% url 'api_programmes' %}")
+      .then(function (response) {
+        if (!response.ok) throw new Error("Unable to load programmes");
+        return response.json();
+      })
+      .then(function (data) {
+        var programmes = data.programmes || [];
+        if (!programmes.length) {
+          renderEmpty("No programmes are available right now.");
+          return;
+        }
+
+        grid.innerHTML = programmes.map(function (programme, index) {
+          var delay = index % 3 ? ' data-wow-delay="' + ((index % 3) * 0.2).toFixed(1) + 's"' : '';
+          var image = programme.image || "https://i.postimg.cc/VvQRbrh9/L2A6687.jpg";
+          return (
+            '<div class="col-lg-4 col-md-6">' +
+              '<div class="program-item wow fadeInUp"' + delay + '>' +
+                '<div class="program-image">' +
+                  '<a href="{% url 'contact' %}" data-cursor-text="View">' +
+                    '<figure class="image-anime">' +
+                      '<img src="' + escapeHtml(image) + '" alt="' + escapeHtml(programme.title) + '">' +
+                    '</figure>' +
+                  '</a>' +
+                '</div>' +
+                '<div class="program-body">' +
+                  '<div class="program-content">' +
+                    '<h3><a href="{% url 'contact' %}">' + escapeHtml(programme.title) + '</a></h3>' +
+                    '<p>' + escapeHtml(programme.description) + '</p>' +
+                  '</div>' +
+                  '<div class="program-button">' +
+                    '<a href="{% url 'contact' %}" class="readmore-btn">contact us</a>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
+          );
+        }).join("");
+      })
+      .catch(function () {
+        renderEmpty("Programmes could not be loaded. Please try again later.");
+      });
+  });
+</script>
     <!-- Jquery Library File -->
     <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
     <!-- Bootstrap js file -->

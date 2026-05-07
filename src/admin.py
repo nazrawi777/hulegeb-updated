@@ -1,6 +1,17 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import BlogPost, Category, GalleryItem, HeroSlide, Product, SubCategory
+from .models import (
+    BankAccount,
+    BlogPost,
+    Category,
+    DonationPurpose,
+    GalleryItem,
+    HeroSlide,
+    Product,
+    Programme,
+    SubCategory,
+    TeamMember,
+)
 
 # Customize admin site header and title
 admin.site.site_header = 'Hulegeb Training & Rehabilitation'
@@ -285,3 +296,113 @@ class ProductAdmin(admin.ModelAdmin):
             )
         return 'No product image yet'
     product_preview_large.short_description = 'Current Product Image'
+
+
+@admin.register(TeamMember)
+class TeamMemberAdmin(admin.ModelAdmin):
+    list_display = ('image_preview', 'name', 'role', 'phone', 'email', 'order', 'is_active', 'created_at')
+    list_filter = ('is_active', 'created_at')
+    search_fields = ('name', 'role', 'phone', 'email')
+    list_editable = ('order', 'is_active')
+    ordering = ('order', 'name')
+    readonly_fields = ('image_preview_large',)
+    fieldsets = (
+        ('Team Member Information', {
+            'fields': ('name', 'role', 'phone', 'email')
+        }),
+        ('Image Source (Choose One)', {
+            'fields': ('image_preview_large', 'image', 'image_url'),
+            'description': 'Upload a team member image OR provide an external URL. At least one is required.'
+        }),
+        ('Display Settings', {
+            'fields': ('order', 'is_active')
+        }),
+    )
+
+    def image_preview(self, obj):
+        img_url = obj.get_image_url()
+        if img_url:
+            return format_html(
+                '<img src="{}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;" />',
+                img_url,
+            )
+        return '-'
+    image_preview.short_description = 'Preview'
+
+    def image_preview_large(self, obj):
+        img_url = obj.get_image_url()
+        if img_url:
+            return format_html(
+                '<img src="{}" style="max-width: 400px; max-height: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />',
+                img_url,
+            )
+        return 'No team member image yet'
+    image_preview_large.short_description = 'Current Team Member Image'
+
+
+@admin.register(Programme)
+class ProgrammeAdmin(admin.ModelAdmin):
+    list_display = ('image_preview', 'title', 'order', 'is_active', 'created_at')
+    list_filter = ('is_active', 'created_at')
+    search_fields = ('title', 'description')
+    list_editable = ('order', 'is_active')
+    ordering = ('order', 'title')
+    readonly_fields = ('image_preview_large',)
+    fieldsets = (
+        ('Programme Information', {
+            'fields': ('title', 'description')
+        }),
+        ('Image Source (Choose One)', {
+            'fields': ('image_preview_large', 'image', 'image_url'),
+            'description': 'Upload a programme image OR provide an external URL. At least one is required.'
+        }),
+        ('Display Settings', {
+            'fields': ('order', 'is_active')
+        }),
+    )
+
+    def image_preview(self, obj):
+        img_url = obj.get_image_url()
+        if img_url:
+            return format_html(
+                '<img src="{}" style="width: 80px; height: 50px; object-fit: cover; border-radius: 4px;" />',
+                img_url,
+            )
+        return '-'
+    image_preview.short_description = 'Preview'
+
+    def image_preview_large(self, obj):
+        img_url = obj.get_image_url()
+        if img_url:
+            return format_html(
+                '<img src="{}" style="max-width: 500px; max-height: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />',
+                img_url,
+            )
+        return 'No programme image yet'
+    image_preview_large.short_description = 'Current Programme Image'
+
+
+class BankAccountInline(admin.TabularInline):
+    model = BankAccount
+    extra = 1
+    fields = ('bank_name', 'account_number', 'account_holder', 'order', 'is_active')
+
+
+@admin.register(DonationPurpose)
+class DonationPurposeAdmin(admin.ModelAdmin):
+    list_display = ('label', 'order', 'is_active', 'created_at')
+    list_filter = ('is_active', 'created_at')
+    search_fields = ('label',)
+    list_editable = ('order', 'is_active')
+    ordering = ('order', 'label')
+    inlines = (BankAccountInline,)
+
+
+@admin.register(BankAccount)
+class BankAccountAdmin(admin.ModelAdmin):
+    list_display = ('bank_name', 'account_number', 'account_holder', 'purpose', 'order', 'is_active', 'created_at')
+    list_filter = ('purpose', 'is_active', 'created_at')
+    search_fields = ('bank_name', 'account_number', 'account_holder', 'purpose__label')
+    list_editable = ('order', 'is_active')
+    ordering = ('order', 'bank_name', 'account_number')
+
