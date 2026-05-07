@@ -178,3 +178,101 @@ class HeroSlide(models.Model):
         if self.image:
             return self.image.url
         return self.image_url or "https://i.postimg.cc/VvQRbrh9/L2A6687.jpg"
+
+
+class Category(models.Model):
+    """Product category shown on the store filter bar."""
+    name = models.CharField(max_length=120, unique=True)
+    slug = models.SlugField(max_length=140, unique=True, blank=True)
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'name']
+        verbose_name = "Product Category"
+        verbose_name_plural = "Product Categories"
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+
+class SubCategory(models.Model):
+    """Product subcategory nested under a category."""
+    category = models.ForeignKey(Category, related_name='subcategories', on_delete=models.CASCADE)
+    name = models.CharField(max_length=120)
+    slug = models.SlugField(max_length=140, blank=True)
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'name']
+        unique_together = ('category', 'slug')
+        verbose_name = "Product Subcategory"
+        verbose_name_plural = "Product Subcategories"
+
+    def __str__(self):
+        return f"{self.category.name} - {self.name}"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+
+class Product(models.Model):
+    """Store product manageable through Django admin."""
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.PROTECT)
+    subcategory = models.ForeignKey(
+        SubCategory,
+        related_name='products',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+    )
+    name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=220, unique=True, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.TextField()
+    short_description = models.CharField(max_length=255, blank=True)
+    image = models.ImageField(upload_to='products/', blank=True, null=True, help_text="Upload a product image")
+    image_url = models.URLField(max_length=500, blank=True, help_text="Or provide an external image URL")
+    is_active = models.BooleanField(default=True, help_text="Show product on website")
+    order = models.PositiveIntegerField(default=0, help_text="Display order (lower numbers first)")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'name']
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    def clean(self):
+        if self.subcategory and self.subcategory.category_id != self.category_id:
+            raise ValidationError('Selected subcategory must belong to the selected category.')
+
+    def get_image_url(self):
+        if self.image:
+            return self.image.url
+        return self.image_url or ""
+
+    def get_short_description(self):
+        if self.short_description:
+            return self.short_description
+        return self.description[:180]

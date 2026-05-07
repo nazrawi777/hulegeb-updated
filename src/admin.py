@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import HeroSlide, GalleryItem, BlogPost
+from .models import BlogPost, Category, GalleryItem, HeroSlide, Product, SubCategory
 
 # Customize admin site header and title
 admin.site.site_header = 'Hulegeb Training & Rehabilitation'
@@ -217,3 +217,71 @@ class HeroSlideAdmin(admin.ModelAdmin):
 
 
 
+
+
+class SubCategoryInline(admin.TabularInline):
+    model = SubCategory
+    extra = 1
+    fields = ('name', 'slug', 'order', 'is_active')
+    prepopulated_fields = {'slug': ('name',)}
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'slug', 'order', 'is_active', 'created_at')
+    list_filter = ('is_active', 'created_at')
+    search_fields = ('name', 'slug')
+    list_editable = ('order', 'is_active')
+    prepopulated_fields = {'slug': ('name',)}
+    inlines = (SubCategoryInline,)
+
+
+@admin.register(SubCategory)
+class SubCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'slug', 'order', 'is_active', 'created_at')
+    list_filter = ('category', 'is_active', 'created_at')
+    search_fields = ('name', 'slug', 'category__name')
+    list_editable = ('order', 'is_active')
+    prepopulated_fields = {'slug': ('name',)}
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('product_preview', 'name', 'category', 'subcategory', 'price', 'order', 'is_active', 'created_at')
+    list_filter = ('category', 'subcategory', 'is_active', 'created_at')
+    search_fields = ('name', 'description', 'short_description')
+    list_editable = ('price', 'order', 'is_active')
+    prepopulated_fields = {'slug': ('name',)}
+    readonly_fields = ('product_preview_large',)
+    fieldsets = (
+        ('Product Information', {
+            'fields': ('name', 'slug', 'category', 'subcategory', 'price', 'short_description', 'description')
+        }),
+        ('Product Image', {
+            'fields': ('product_preview_large', 'image', 'image_url'),
+            'description': 'Upload a product image OR provide an external URL.'
+        }),
+        ('Display Settings', {
+            'fields': ('order', 'is_active')
+        }),
+    )
+
+    def product_preview(self, obj):
+        img_url = obj.get_image_url()
+        if img_url:
+            return format_html(
+                '<img src="{}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;" />',
+                img_url,
+            )
+        return '-'
+    product_preview.short_description = 'Preview'
+
+    def product_preview_large(self, obj):
+        img_url = obj.get_image_url()
+        if img_url:
+            return format_html(
+                '<img src="{}" style="max-width: 400px; max-height: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />',
+                img_url,
+            )
+        return 'No product image yet'
+    product_preview_large.short_description = 'Current Product Image'

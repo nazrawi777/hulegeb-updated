@@ -1,5 +1,6 @@
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
-from .models import HeroSlide, GalleryItem, BlogPost
+from .models import BlogPost, Category, GalleryItem, HeroSlide, Product
 from django.core.paginator import Paginator
 
 
@@ -76,3 +77,89 @@ def store(request):
 def page_404(request, exception=None):
     return render(request, '404.html', status=404)
 
+
+
+def _absolute_media_url(request, url):
+    """Return absolute URLs for uploaded media while leaving external URLs unchanged."""
+    if not url:
+        return ""
+    if url.startswith(('http://', 'https://')):
+        return url
+    return request.build_absolute_uri(url)
+
+
+def _product_to_dict(product, request):
+    image_url = _absolute_media_url(request, product.get_image_url())
+    return {
+        'id': product.id,
+        'name': product.name,
+        'title': product.name,
+        'slug': product.slug,
+        'price': float(product.price),
+        'currency': 'ETB',
+        'description': product.description,
+        'short_description': product.get_short_description(),
+        'image': image_url,
+        'images': [image_url] if image_url else [],
+        'category': product.category.slug,
+        'category_name': product.category.name,
+        'subcategory': product.subcategory.slug if product.subcategory else 'all',
+        'subcategory_name': product.subcategory.name if product.subcategory else '',
+        'brand': 'Hulegeb',
+        'sku': f'HLG-{product.id:04d}',
+        'inventory': 0,
+        'default_variant': 'default',
+        'variants': [
+            {
+                'slug': 'default',
+                'name': 'Default',
+                'price': float(product.price),
+                'inventory': 0,
+                'images': ['front'],
+            }
+        ],
+        'attributes': {
+            'category': product.category.name,
+            'subcategory': product.subcategory.name if product.subcategory else '',
+        },
+    }
+
+
+def api_products(request):
+    products = (
+        Product.objects.filter(is_active=True, category__is_active=True)
+        .select_related('category', 'subcategory')
+    )
+    data = [_product_to_dict(product, request) for product in products]
+    return JsonResponse({'products': data})
+
+
+def api_product_detail(request, product_id):
+    product = get_object_or_404(
+        Product.objects.select_related('category', 'subcategory'),
+        pk=product_id,
+        is_active=True,
+        category__is_active=True,
+    )
+    return JsonResponse(_product_to_dict(product, request))
+
+
+def api_categories(request):
+    categories = Category.objects.filter(is_active=True).prefetch_related('subcategories')
+    data = []
+    for category in categories:
+        data.append({
+            'id': category.id,
+            'name': category.name,
+            'slug': category.slug,
+            'subcategories': [
+                {
+                    'id': subcategory.id,
+                    'name': subcategory.name,
+                    'slug': subcategory.slug,
+                }
+                for subcategory in category.subcategories.all()
+                if subcategory.is_active
+            ],
+        })
+    return JsonResponse({'categories': data})
