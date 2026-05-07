@@ -352,7 +352,9 @@
 
         grid.innerHTML = programmes.map(function (programme, index) {
           var delay = index % 3 ? ' data-wow-delay="' + ((index % 3) * 0.2).toFixed(1) + 's"' : '';
-          var image = programme.image || "https://i.postimg.cc/VvQRbrh9/L2A6687.jpg";
+          var image = (programme.image && programme.image.startsWith('/media'))
+    ? window.location.origin + programme.image
+    : (programme.image || "https://i.postimg.cc/VvQRbrh9/L2A6687.jpg");
           return (
             '<div class="col-lg-4 col-md-6">' +
               '<div class="program-item wow fadeInUp"' + delay + '>' +

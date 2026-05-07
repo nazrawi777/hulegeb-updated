@@ -354,7 +354,9 @@
           var delay = index % 4 ? ' data-wow-delay="' + ((index % 4) * 0.2).toFixed(1) + 's"' : '';
           var phone = member.phone ? '<p><a href="tel:' + escapeHtml(member.phone.replace(/\s/g, "")) + '" style="color: gray;">' + escapeHtml(member.phone) + '</a></p>' : '';
           var email = member.email ? '<p><a href="mailto:' + escapeHtml(member.email) + '" style="color: gray;">' + escapeHtml(member.email) + '</a></p>' : '';
-          var image = member.image || "https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png";
+          var image = (member.image && member.image.startsWith('/media'))
+    ? window.location.origin + member.image
+    : (member.image || "https://i.postimg.cc/BvJMkxLR/Hulegeb_Training_Rehabilitation_Logo_no_Background.png");
           return (
             '<div class="col-lg-3 col-md-6">' +
               '<div class="team-item wow fadeInUp"' + delay + '>' +

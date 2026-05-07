@@ -177,7 +177,7 @@ def api_categories(request):
 
 
 def _team_member_to_dict(member, request):
-    image_url = _absolute_media_url(request, member.get_image_url())
+    image_url = member.get_image_url()
     return {
         'id': member.id,
         'name': member.name,
@@ -196,7 +196,7 @@ def api_team(request):
 
 
 def _programme_to_dict(programme, request):
-    image_url = _absolute_media_url(request, programme.get_image_url())
+    image_url = programme.get_image_url()
     return {
         'id': programme.id,
         'title': programme.title,
